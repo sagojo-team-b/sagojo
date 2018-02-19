@@ -1,24 +1,143 @@
-# README
+## users
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|email|string|null: false, unipue: true|
+|magazine|integer|null: false|
 
-Things you may want to cover:
+### Association
+- has_many: articles through user_articles, through likes
+- has_many :groups through user_groups
+- has_one :profile
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## articles
 
-* Database creation
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|image|image|null: false|
+|job-type_id|integer|null: false|
+|end-date|integer|null: false|
 
-* Database initialization
+### Association
+- belongs_to :job-type
+- has_many :tags through :tag_articles
+- has_many :users through user_articles, through likes
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## job-types
+|Column|Type|Options|
+|------|----|-------|
+|type|string|null: false|
 
-* ...
+### Association
+- has_many :articles
+
+
+## user_articles
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|article_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :article
+
+
+## tag_articles
+|Column|Type|Options|
+|------|----|-------|
+|article_id|references|null: false, foreign_key: true|
+|tag_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :tag
+- belong_to :article
+
+
+## tag_articles
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+
+### Association
+- has_many :articles through :tag_articles
+
+
+## likes
+|Column|Type|Options|
+|------|----|-------|
+|article_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :article
+
+## messages
+|Column|Type|Options|
+|------|----|-------|
+|content|text||
+|image|image||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+
+## user_groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :users through user-groups
+- has_many :messages
+
+## profilesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|avatar|||
+|image|string||
+|catch_phrase|string||
+|birth|date||
+|sex|string|null: false|
+|tel|integer||
+|address|string||
+|present_place|string||
+|link|string|string|
+|sns_acount|string||
+|job_type_tags|string||
+|job_type|string||
+|language|text||
+|job_history|text||
+|travel_history|text||
+|skill_tags|string||
+|skill|text||
+|achievement|text||
+|income|string||
+|prepare_date|string||
+|travel_schedule|string||
+|travel_content|text||
+|self_introduction|text||
+
+### Association
+- belongs_to :user
+
