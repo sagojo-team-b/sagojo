@@ -90,3 +90,54 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
+
+
+## user_groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :users through user-groups
+- has_many :messages
+
+## profilesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|avatar|||
+|image|string||
+|catch_phrase|string||
+|birth|date||
+|sex|string|null: false|
+|tel|integer||
+|address|string||
+|present_place|string||
+|link|string|string|
+|sns_acount|string||
+|job_type_tags|string||
+|job_type|string||
+|language|text||
+|job_history|text||
+|travel_history|text||
+|skill_tags|string||
+|skill|text||
+|achievement|text||
+|income|string||
+|prepare_date|string||
+|travel_schedule|string||
+|travel_content|text||
+|self_introduction|text||
+
+### Association
+- belongs_to :user
+
