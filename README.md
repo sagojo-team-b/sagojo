@@ -41,10 +41,52 @@
 ## user_articles
 |Column|Type|Options|
 |------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|article_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :article
+
+
+## tag_articles
+|Column|Type|Options|
 |------|----|-------|
+|article_id|references|null: false, foreign_key: true|
+|tag_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :tag
+- belong_to :article
 
 
-◆user_articles（※中間テーブル）
-belongs_to :user
-belongs_to :article
-（必要なカラム）user-id, article-id
+## tag_articles
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+
+### Association
+- has_many :articles through :tag_articles
+
+
+## likes
+|Column|Type|Options|
+|------|----|-------|
+|article_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :article
+
+## messages
+|Column|Type|Options|
+|------|----|-------|
+|content|text||
+|image|image||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
