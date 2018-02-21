@@ -38,6 +38,8 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'rails-pry'
 gem 'devise'
+gem 'omniauth'
+gem 'letter_opener_web'
 
 
 group :development, :test do
