@@ -1,0 +1,56 @@
+.header {
+  width: 1246px;
+  height: 46px;
+  padding: 12px 60px;
+  border-bottom: 1px;
+  position: fixed;
+}
+
+.header-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.header-logo {
+  display: block;
+  float: left;
+  margin: 5px 68px 0 0;
+  &__img{
+    width: 118px;
+    height: 18px;
+  }
+  &__string {
+    font-size: 10px;
+  }
+}
+
+.header-globalnav-01 {
+  height: 100%;
+  float: left;
+}
+
+.header-list {
+  width: 100%;
+  height: 100%;
+  line-height: 46px;
+  font-size: 13px;
+  &__item {
+    margin-right: 30px;
+    display: inline-block;
+  }
+}
+
+.header-utility-02 {
+  float: right;
+  width: 300px;
+  height: 100%;
+  &__item {
+    display: inline-block;
+  }
+  &--icon.fa.fa-bell {
+  }
+  &--icon.fa.fa-comment {
+  }
+  &--profile-name{
+  }
+}
