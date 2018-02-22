@@ -1,5 +1,27 @@
-<p>Welcome <%= @email %>!</p>
+<p><%= @user.name %>さん</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>SAGOJOへご訪問いただきありがとうございます！
+下記のリンクをクリックし、メールアドレスの認証を完了してください。
+認証を完了することで、SAGOJOのシゴトに応募することができます。</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>SAGOJOを利用して、あなたの旅をもっと充実させましょう！</p>
+
+
+<p>※このメールに心当たりがない方は、お手数ですが、info@#####.linkまでご連絡ください。</p>
+
+line = "========================="
+
+puts line
+<P>すごい旅人求人サイト『SAGOJO（サゴジョー）」
+https://############
+株式会社SAGOJO
+info@#####.link
+Facebook:###########
+Twitter:############
+instagram:############
+LINE@(旅人通信社):###########</P>
+puts line
+
+
