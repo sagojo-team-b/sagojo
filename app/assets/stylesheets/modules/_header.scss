@@ -5,6 +5,8 @@
   border-bottom: 1px;
   position: fixed;
   border-bottom: 1px solid $light_gray;
+  background-color: white;
+  z-index: 10;
 }
 
 .header-inner {
