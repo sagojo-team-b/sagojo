@@ -34,9 +34,9 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-<% if user_signed_in? %>
-  <% redirect_to root_path %>
-<% end %>
+<!-- <% if user_signed_in? %> -->
+<%= redirect_to users_identify_path %>
+<!-- <% end %> -->
 <!--<%= render "devise/shared/links" %>-->
 
 

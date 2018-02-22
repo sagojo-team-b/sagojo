@@ -4,15 +4,15 @@
   padding: 0;
 }*/
 
-* {
+/** {
   border: solid 1px red;
-}
+}*/
 
 .account-box {
   height: 550px;
   width: 450px;
   background-color: white;
-  margin: 0 auto;
+  margin: 60px auto;
   border: solid 1px red;
   &__image {
     text-align: center;
@@ -23,37 +23,48 @@
     text-align: center;
     font-size: 25px;
   }
+  &__text {
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+  }
   &__field {
     height: 55px;
-    text-align: center;
-    margin: 10px 0;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 30%;
     &__facebook {
       height: 100%;
-      width: 80%;
-      margin: 0 auto;
-      border-radius: 20%;
-      text-align: center;
-      font-size: 15px;
+      width: 100%;
       background-color: #3366CC ;
       color: white;
+      font-size: 15px;
+      text-align: center;
+      margin: 0 auto;
+      border-radius: 30%;
+      border-style: none;
+      cursor: pointer;
     }
     &__form {
       height: 100%;
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
-      border-radius: 20%;
+      border-radius: 30%;
       text-align: center;
       font-size: 15px;
+      background: none;
+      border: solid 1px gray;
     }
     &__action {
       height: 100%;
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
-      border-radius: 20%;
+      border-radius: 30%;
       text-align: center;
       font-size: 15px;
       background-color: #FFCC33 ;
       color: white;
+      cursor: pointer;
     }
   }
 }
