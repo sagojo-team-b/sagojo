@@ -1,27 +1,35 @@
-<h2>Log in</h2>
+<div class="account-box">
+  <p class="account-box__image">image</p>
+  <p class="account-box__title">アカウントを入力してログイン</p>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="account-box__field">
+      <p class="account-box__field__facebook">Facebookでログイン</p>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+    <div class="account-box__field">
+    <!--   <%= f.label :email %><br /> -->
+      <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email", class: "account-box__field__form" %>
+    </div>
+
+    <div class="account-box__field">
+    <!--   <%= f.label :password %><br /> -->
+      <%= f.password_field :password, placeholder: "パスワード", autocomplete: "off", class: "account-box__field__form" %>
+    </div>
+
+  <!--   <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%> -->
+
+    <div class="account-box__field">
+      <%= f.submit "ログイン", class: "account-box__field__action" %>
+    </div>
+  <% end %>
+</div>
 <% if user_signed_in? %>
   <% redirect_to root_path %>
 <% end %>
