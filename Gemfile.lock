@@ -220,6 +220,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
+  letter_opener
   letter_opener_web
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
