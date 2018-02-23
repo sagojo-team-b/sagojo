@@ -1,4 +1,57 @@
 .right {
   width: 340px;
-  float:right;
+  float: right;
+
+  .side-job-list {
+    list-style: none;
+    float: right;
+
+    li {
+      float: left;
+      width: 165px;
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 1.5;
+      // display: block;
+      // box-sizing: border-box;
+      font-size: 0.9rem;
+      border-radius: 5px;
+
+
+      a {
+        padding: 25px 10px;
+        text-decoration: none;
+        display: block;
+
+        span {
+          display: block;
+        }
+      }
+    }
+    li:nth-child(even) {
+      margin-left: 10px;
+    }
+
+    &__current {
+      background-color: #ffcb00;
+      font-weight: bold;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &__type {
+      background-color: gray;
+
+      a {
+        color: #000;
+      }
+      a:hover {
+        color: #fff;
+        background-color: #ffcb00;
+        border-radius: 5px;
+      }
+    }
+  }
 }
