@@ -7,20 +7,32 @@
 /** {
   border: solid 1px red;
 }*/
-// .account-large-box {
-//   height: 650px;
-//   width: 550px;
-//   border: solid 1px red;
-//   background-color: white;
-//   margin: 0 auto;
-// }
+
+// bodyの背景が通ったら枠線消す
+
+.account-large-box {
+  height: 700px;
+  width: 700px;
+  border: solid 1px red;
+  background-color: white;
+  margin: 50px auto;
+}
+
+.account-send-box {
+  height: 500px;
+  width: 500px;
+  margin: 50px auto;
+  background-color: white;
+  border: solid 1px red;
+}
 
 .account-box {
   height: 100%;
-  width: 70%;
+  width: 500px;
   background-color: white;
-  margin: 60px auto;
+  margin: 50px auto;
   border: solid 1px red;
+  padding: 0 0 40px 0;
   &__image {
     height: 100px;
     width: 100px;
@@ -102,6 +114,24 @@
       cursor: pointer;
     }
   }
+  .name-announce, .pass-length {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 12px;
+  }
+  .magazine-button {
+    text-align: center;
+    font-size: 12px;
+  }
 }
 
-
+.convention-button {
+  text-align: center;
+  &__text {
+    font-size: 14px;
+    color: red;
+  }
+  &__check {
+    font-size: 12px;
+  }
+}

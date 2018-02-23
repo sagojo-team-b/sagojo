@@ -1,39 +1,58 @@
-<h2>Sign up</h2>
-
+<div class="account-box">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <div class="account-box__image">
+    <%= image_tag 'icon-tabibito-01.svg' %>
+  </div>
+  <p class="account-box__title">
+    登録してシゴトに応募しよう
+  </p>
+  <div class="convention-button">
+    <p class="convention-button__text">登録するには<br>
+    チェックボックスにチェックを入れてください</p>
+    <%= f.check_box :convention %><%= f.label :"利用規約と会員規約とプライバシーポリシーに同意します", class: "convention-button__check" %>
+    <!-- 利用規約ページができたらlink差し込む -->
+  </div>
+  <div class="account-box__field">
+      <p class="account-box__field__facebook">Facebookでログイン</p>
+  </div>
+  <div class="account-box__field">
+    <!-- <%= f.label :name %><br /> -->
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "account-box__field__form", placeholder: "お名前" %>
+  </div>
+  <p class="name-announce">
+    キャリアのアドレスは登録確認メールが届かない事がございます。<br>
+    gmailなどのアドレスをお使いください。
+  </p>
+
+  <div class="account-box__field">
+    <!-- <%= f.label :email %><br /> -->
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "account-box__field__form", placeholder: "メールアドレス" %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="account-box__field">
+    <!-- <%= f.label :password %> -->
+    <%= f.password_field :password, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード" %>
+  </div>
+  <% if @minimum_password_length %>
+    <p class="pass-length">パスワードは<%= @minimum_password_length %>文字以上にしてください</p>
+  <% end %>
+  <div class="account-box__field">
+    <!-- <%= f.label :password_confirmation %><br /> -->
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード確認" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="magazine-button">
+    <%= f.check_box :magazine, checked: true %><%= f.label :"メルマガをご利用になられますか?" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="magazine_button">
-    <%= f.check_box :magazine %><%= f.label :"Do you need our magazine?" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="account-box__field">
+    <%= f.submit "メールアドレスで旅人登録", class: "account-box__field__action" %>
   </div>
 <% end %>
+</div>
+
 <!-- <% if user_signed_in? %> -->
 <%= redirect_to users_identify_path %>
 <!-- <% end %> -->
