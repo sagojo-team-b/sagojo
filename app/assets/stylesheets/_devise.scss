@@ -7,10 +7,17 @@
 /** {
   border: solid 1px red;
 }*/
+// .account-large-box {
+//   height: 650px;
+//   width: 550px;
+//   border: solid 1px red;
+//   background-color: white;
+//   margin: 0 auto;
+// }
 
 .account-box {
-  height: 550px;
-  width: 450px;
+  height: 100%;
+  width: 70%;
   background-color: white;
   margin: 60px auto;
   border: solid 1px red;
@@ -27,6 +34,10 @@
   &__title {
     text-align: center;
     font-size: 25px;
+    span {
+      font-size: 14px;
+      color: black;
+    }
   }
   &__text {
     text-align: center;
@@ -34,6 +45,20 @@
     font-size: 12px;
     span {
       font-weight: bold;
+    }
+    .complete {
+      font-size: 16px;
+      color: #ffcc33;
+    }
+  }
+  &__article {
+      height: 280px;
+      width: 600px;
+      border: solid 1px red;
+      background-color: #888;
+      margin: 30px auto 50px;
+    p {
+      text-align: center;
     }
   }
   &__field {

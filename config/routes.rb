@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
   get 'users/identify', to: 'users#identify'
+  get 'users/complete', to: 'users#complete'
 
   root 'articles#index'
 end
