@@ -1,0 +1,46 @@
+.right {
+  width: 340px;
+  float: right;
+
+  .job {
+    list-style: none;
+    &__list {
+      float: left;
+      width: 165px;
+      background-color: gray;
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 1.5;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      &--current {
+        background-color: $jobYellow;
+        font-weight: bold;
+      }
+      &:nth-child(even) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .btn-job {
+    padding: 25px 10px;
+    text-decoration: none;
+    display: block;
+    &--current {
+      color: $jobWhite;
+    }
+    &__type {
+      color: $jobBlack;
+      &:hover {
+        color: $jobWhite;
+        background-color: $jobYellow;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .num-job {
+    display: block;
+  }
+}
