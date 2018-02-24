@@ -1,2 +1,8 @@
-@import "./reset";
-@import "./modules/side-bar";
+@import 'config/colors';
+@import './reset';
+@import 'font-awesome';
+@import 'modules/header';
+@import 'modules/slider';
+@import 'modules/main-content';
+@import "modules/side-bar";
+
