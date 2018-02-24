@@ -1,7 +1,8 @@
 .main-content-wrapper {
+  width: 1090px;
   height: 1538px;
   padding: 65px 15px 80px;
-  margin: 15px 123px;
+  margin: 15px auto;
   background-color: #f5f5f5;
   z-index: 2;
 }
@@ -32,6 +33,7 @@
     }
     &--company-image {
       margin-right: 10px;
+      vertical-align: middle;
     }
     &--company-name {
       font-size: 14px;
@@ -61,32 +63,37 @@
   }
 }
 
-.thum-job-taglist-image {
-  width: 18px;
+.thum-job-taglist {
   height: 18px;
-  float: left;
-}
-
-.thum-job-taglist-ul {
-  margin-left: 35px;
-  float: left;
-}
-
-.thum-job-taglist-li {
-  font-size: 11px;
-  margin-right: 15px;
-  display: inline-block;
-  color: #aeaeae;
+  margin-bottom: 10px;
+  &__image {
+    width: 18px;
+    height: 18px;
+    float: left;
+  }
+  &__ul {
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+    &--image {
+      vertical-align: middle;
+    }
+    &--li {
+      font-size: 11px;
+      margin-right: 15px;
+      display: inline-block;
+      color: #aeaeae;
+    }
+  }
 }
 
 .inner-01 {
   margin-right: 30px;
   display: inline-block;
   &__image {
-    position: relative;
-    float: left;
     width: 22px;
     height: 22px;
+    vertical-align: middle;
   }
   &__p {
     padding-left: 10px;
@@ -101,9 +108,9 @@
   display: inline-block;
   &__image {
     position: relative;
-    float: left;
     width: 18px;
     height: 18px;
+    vertical-align: middle;
   }
   &__p {
     padding-left: 10px;
@@ -176,9 +183,7 @@
   right: -50px;
   color: white;
   font-size: 10px;
-  // font-weight: bold;
   transform: rotate(45deg);
-  // display: inline-block;
   background-color: red;
   padding: 32px 40px 1px 32px;
   z-index: 1;
@@ -211,5 +216,9 @@
   &__image {
     width: 130px;
     height: 19.5px;
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+  &__p {
   }
 }
