@@ -88,7 +88,6 @@
       margin: 0 auto;
       border-radius: 100px;
       border-style: none;
-      cursor: pointer;
     }
     &__form {
       height: 100%;
@@ -111,7 +110,6 @@
       font-size: 15px;
       background-color: #FFCC33 ;
       color: white;
-      cursor: pointer;
     }
   }
   .name-announce, .pass-length {
@@ -130,6 +128,7 @@
   &__text {
     font-size: 14px;
     color: red;
+    font-weight: bold;
   }
   &__check {
     font-size: 12px;

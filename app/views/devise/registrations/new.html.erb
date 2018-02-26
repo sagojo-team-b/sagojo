@@ -11,10 +11,10 @@
   <div class="convention-button">
     <p class="convention-button__text">登録するには<br>
     チェックボックスにチェックを入れてください</p>
-    <%= f.check_box :convention %><%= f.label :"利用規約と会員規約とプライバシーポリシーに同意します", class: "convention-button__check" %>
+    <%= f.check_box :convention, class: "convention-btn" %><%= f.label :"利用規約と会員規約とプライバシーポリシーに同意します", class: "convention-button__check" %>
     <!-- 利用規約ページができたらlink差し込む -->
   </div>
-  <div class="account-box__field">
+  <div class="account-box__field account-box__field__fb">
       <p class="account-box__field__facebook">Facebookでログイン</p>
   </div>
   <div class="account-box__field">
