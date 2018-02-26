@@ -22,26 +22,31 @@
         margin-left: 10px;
       }
     }
-  }
-
-  .btn-job {
+    &__btn {
     padding: 25px 10px;
     text-decoration: none;
     display: block;
-    &--current {
-      color: $jobWhite;
-    }
-    &__type {
-      color: $jobBlack;
-      &:hover {
-        color: $jobWhite;
-        background-color: $jobYellow;
-        border-radius: 5px;
+      &__hover-type {
+        color: $jobBlack;
+        &:hover {
+          color: $jobWhite;
+          background-color: $jobYellow;
+          border-radius: 5px;
+        }
       }
+      &--current {
+        color: $jobWhite;
+      }
+    }
+    &__num {
+    display: block;
     }
   }
 
-  .num-job {
-    display: block;
+  .tag {
+    float: right;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: red;
   }
 }
