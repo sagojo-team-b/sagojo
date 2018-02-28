@@ -11,8 +11,8 @@
   .sub-content-inner
     .sub-content-sort
       %form.sub-content-form
-        .sub-content-select
-          %select.sub-content-selectbox{ onChange: "location.href = value" }
+        %label.sub-content-select
+          %select.sub-content-select-box{ onChange: "location.href = value" }
             %option{ value: "/work/recommend", selected: "selected" }おすすめ順
             %option{ value: "/work/latest" }新着順
             %option{ value: "/work/popular" }人気順
