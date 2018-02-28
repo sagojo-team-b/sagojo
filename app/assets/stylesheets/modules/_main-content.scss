@@ -1,7 +1,7 @@
 .main-wrapper {
   width: 100%;
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: $snow_gray;
 }
 
 .main-content-wrapper {
@@ -9,13 +9,13 @@
   height: 1538px;
   padding: 65px 15px 80px;
   margin: 0 auto;
-  background-color: #f5f5f5;
+  background-color: $snow_gray;
   z-index: 2;
 }
 // メイン左側
 .left-content {
   width: 690px;
-  background-color: #f5f5f5;
+  background-color: $snow_gray;
   float: left;
 }
 
@@ -55,12 +55,14 @@
       display: inline-block;
       margin-bottom: 5px;
       font-size: 12px;
-      color: #aeaeae;
+      color: 
+$dark_gray;
     }
     &--thum-job-utility {
       font-size: 11px;
       margin-bottom: 10px;
-      color: #aeaeae;
+      color: 
+$dark_gray;
     }
     &--thum-job-taglist {
       height: 18px;
@@ -88,7 +90,7 @@
       font-size: 11px;
       margin-right: 15px;
       display: inline-block;
-      color: #aeaeae;
+      color: $dark_gray;
     }
   }
 }
@@ -121,7 +123,7 @@
   &__p {
     padding-left: 10px;
     font-size: 11px;
-    color: #aeaeae;
+    color: $dark_gray;
     display: inline-block;
   }
 }
@@ -139,7 +141,7 @@
 .right-content {
   width: 340px;
   height: 1538px;
-  background-color: #f5f5f5;
+  background-color: $snow_gray;
   float: right;
 }
 
@@ -176,7 +178,7 @@
   }
   &__p {
     font-size: 11px;
-    color: #aeaeae;
+    color: $dark_gray;
     padding-left: 20px;
     float: left;
   }
@@ -276,7 +278,7 @@
   &__message {
     font-size: 13px;
     text-align: center;
-    color: #aeaeae;
+    color: $dark_gray;
   }
 
 }

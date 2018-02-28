@@ -16,7 +16,7 @@
     margin-bottom: 75px;
     text-align: center;
     letter-spacing: 2px;
-    color: #ffcb00;
+    color: $yellow;
   }
 }
 
@@ -80,9 +80,9 @@
     letter-spacing: 3px;
     width: 100%;
     padding: 16px;
-    background-color: #ffcb00;
+    background-color: $yellow;
     border-radius: 27px;
-    border: 1px solid #ffcb00;
+    border: 1px solid $yellow;
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;

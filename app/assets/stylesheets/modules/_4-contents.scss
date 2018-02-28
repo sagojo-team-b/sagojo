@@ -2,7 +2,7 @@
   width: 100%;
   height: 400px;
   padding: 150px 0 150px 0;
-  background-color: #efefef;
+  background-color: $bright_gray;
   clear: both;
 }
 
@@ -49,7 +49,7 @@
   height: 100%;
   float: left;
   margin-right: 14px;
-  background-color: #ffcb00;
+  background-color: $yellow;
   &__a {
   min-height: 400px;
   padding: 65px 20px 15px 20px;
