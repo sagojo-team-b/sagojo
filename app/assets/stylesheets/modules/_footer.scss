@@ -1,0 +1,75 @@
+.footer {
+  width: 100%;
+  height: 500px;
+  padding: 75px 0 60px 0;
+  background-color: #232323;
+  color: white;
+  position: relative;
+}
+
+.footer-inner {
+  width: 794px;
+  margin: 0 auto 75px;
+  &__p {
+    font-family: "Arial Rounded MT", "Arial Rounded MT Bold";
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 75px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ffcb00;
+  }
+}
+
+.footer-wrap, .bigger-ul, .smaller-ul {
+  overflow: auto;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer-col {
+  float: left;
+  width: 50%;
+
+  .bigger-li {
+    float: left;
+    width: 40%;
+
+    .smaller-li {
+      margin-top: 12px;
+      color: #808080;
+      font-weight: normal;
+    }
+  }
+}
+
+.footer-opinion-form {
+  float: left;
+  width: 50%;
+  &__p {
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .mail-address-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  textarea {
+    margin: 10px 0;
+    width: 100%;
+    height: 210px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+  }
+}
