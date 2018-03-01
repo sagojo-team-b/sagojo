@@ -48,14 +48,11 @@
   </div>
 
   <div class="account-box__field">
-    <%= f.submit "メールアドレスで旅人登録", class: "account-box__field__action" %>
+    <%= f.submit "メールアドレスで旅人登録", class: "account-box__field__action account-box__field__action__sign-in", redirect_to: users_identify_path %>
   </div>
 <% end %>
 </div>
 
-<!-- <% if user_signed_in? %> -->
-<%= redirect_to users_identify_path %>
-<!-- <% end %> -->
 <!--<%= render "devise/shared/links" %>-->
 
 

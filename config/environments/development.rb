@@ -27,7 +27,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -52,15 +52,14 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :letter_opener_web
 
 
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
-    :address => ENV['TEAMB_EMAIL'],
+    :address => 'smtp.gmail.com',
     :port => 587,
-    :domain => 'smtp.gmail.com',
     :user_name => ENV['TEAMB_EMAIL'], #gmailアドレス
     :password => ENV['TEAMB_PASS'], #gmailパスワード
-    :authentication => 'login',
+    :authentication => :plain
   }
 
   # Use an evented file watcher to asynchronously detect changes in source code,
