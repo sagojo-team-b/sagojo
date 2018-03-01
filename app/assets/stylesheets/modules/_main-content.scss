@@ -1,0 +1,284 @@
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $snow_gray;
+}
+
+.main-content-wrapper {
+  width: 1090px;
+  height: 1538px;
+  padding: 65px 15px 80px;
+  margin: 0 auto;
+  background-color: $snow_gray;
+  z-index: 2;
+}
+// メイン左側
+.left-content {
+  width: 690px;
+  background-color: $snow_gray;
+  float: left;
+}
+
+.job-thumnail {
+  width: 690px;
+  height: 260px;
+  margin-top: 20px;
+  background-color: white;
+  &__image {
+    width: 260px;
+    height: 260px;
+    float: left;
+  }
+  &__content {
+    width: 390px;
+    height: 220px;
+    padding: 20px;
+    float: right;
+    &--company {
+      margin-bottom: 15px;
+    }
+    &--company-image {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    &--company-name {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+    &--job-title {
+      font-weight: bold;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    &--thum-job-desc {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: 
+$dark_gray;
+    }
+    &--thum-job-utility {
+      font-size: 11px;
+      margin-bottom: 10px;
+      color: 
+$dark_gray;
+    }
+    &--thum-job-taglist {
+      height: 18px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.thum-job-taglist {
+  height: 18px;
+  margin-bottom: 10px;
+  &__image {
+    width: 18px;
+    height: 18px;
+    float: left;
+  }
+  &__ul {
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+    &--image {
+      vertical-align: middle;
+    }
+    &--li {
+      font-size: 11px;
+      margin-right: 15px;
+      display: inline-block;
+      color: $dark_gray;
+    }
+  }
+}
+
+.inner-01 {
+  margin-right: 30px;
+  display: inline-block;
+  &__image {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+  }
+  &__p {
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+  }
+}
+
+.inner-02 {
+  margin-right: 30px;
+  display: inline-block;
+  &__image {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+  }
+  &__p {
+    padding-left: 10px;
+    font-size: 11px;
+    color: $dark_gray;
+    display: inline-block;
+  }
+}
+
+.see-more-btn {
+  display: block;
+  width: 670px;
+  height: 25px;
+  padding: 18px 10px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+}
+// メイン右側
+.right-content {
+  width: 340px;
+  height: 1538px;
+  background-color: $snow_gray;
+  float: right;
+}
+
+.topbanner {
+  width: 340px;
+  margin: 10px 0 30px 0;
+}
+
+.right-content-01 {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.right-column-01 {
+  width: 305px;
+  height: 68px;
+  padding: 15px 20px 15px 15px;
+  margin-top: 10px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  &__image {
+    width: 60px;
+    height: 60px;
+    float: left;
+  }
+  &__title {
+    width: 230px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    float: right;
+    margin-bottom: 10px;
+  }
+  &__p {
+    font-size: 11px;
+    color: $dark_gray;
+    padding-left: 20px;
+    float: left;
+  }
+}
+
+.thum-column-label {
+  font-family: 'Arial Rounded MT', 'Arial Rounded MT Bold';
+  vertical-align: bottom;
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  color: white;
+  font-size: 10px;
+  transform: rotate(45deg);
+  background-color: red;
+  padding: 32px 40px 1px 32px;
+  z-index: 1;
+}
+
+.right-content-02 {
+  margin: 30px 0 20px;
+}
+
+.see-more-btn-right {
+  display: block;
+  width: 320px;
+  height: 25px;
+  padding: 18px 10px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.side-sns {
+  width: 280px;
+  height: 218px;
+  padding: 25px 30px;
+  margin-top: 30px;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+}
+
+.sns-title {
+  &__image {
+    width: 130px;
+    height: 19.5px;
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+}
+
+.side-sns-list {
+  &__facebook {
+    display: inline-block;
+    width: 183px;
+    height: 35px;
+    padding: 15px 47px 15px 50px;
+    background-color: #3a589b;
+    margin: 20px 0 15px 0;
+    border-radius: 35px;
+    text-align: center;
+    letter-spacing: 3px;
+    &--image {
+      width: 25px;
+      height: 35px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    &--p {
+      display: inline-block;
+      color: white;
+      font-size: 14px;
+    }
+  }
+  &__twitter {
+    display: inline-block;
+    width: 183px;
+    height: 35px;
+    padding: 15px 47px 15px 50px;
+    background-color: #1aa8e2;
+    margin-bottom: 15px;
+    border-radius: 35px;
+    text-align: center;
+    letter-spacing: 3px;
+    &--image {
+      width: 25px;
+      height: 35px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    &--p {
+      display: inline-block;
+      color: white;
+      font-size: 14px;
+    }
+  }
+  &__message {
+    font-size: 13px;
+    text-align: center;
+    color: $dark_gray;
+  }
+
+}
