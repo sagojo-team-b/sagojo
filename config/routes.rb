@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    confirmations: 'users/confirmations',
+    registrations: 'users/registrations'
+  }
+
+  devise_scope :user do
+    get 'users/registrations/show' => 'users/registrations#show'
+  end
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
-
-  resources :users, only: [:edit, :update]
-  get 'users/identify', to: 'users#identify'
-  get 'users/complete', to: 'users#complete'
 
   root 'articles#index'
 end
