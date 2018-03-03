@@ -20,7 +20,7 @@ html, body {
   height: 100%;
   width: 500px;
   background-color: white;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   padding: 0 0 40px 0;
   &__image {
     height: 100px;
@@ -120,5 +120,33 @@ html, body {
   }
   &__check {
     font-size: 12px;
+  }
+}
+
+.sign_up {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 12px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.sign_in {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 12px;
+  &__forget-pass {
+    float: left;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__to-sign_up {
+    float: right;
+    a {
+      text-decoration: none;
+    }
   }
 }

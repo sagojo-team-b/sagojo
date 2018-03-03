@@ -48,9 +48,12 @@
   </div>
 
   <div class="account-box__field">
-    <%= f.submit "メールアドレスで旅人登録", class: "account-box__field__action account-box__field__action__sign-in", redirect_to: '/users/registrations/show' %>
+    <%= f.submit "メールアドレスで旅人登録", class: "account-box__field__action account-box__field__action__sign-in", redirect_to: "/users/identify" %>
   </div>
 <% end %>
+</div>
+<div class="sign_up">
+  <p>ログインは<a href="/users/sign_in">こちら</a>から</p>
 </div>
 
 <!--<%= render "devise/shared/links" %>-->

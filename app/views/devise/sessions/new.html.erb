@@ -33,6 +33,10 @@
   <% end %>
   <!-- <%= render "devise/shared/links" %> -->
 </div>
+<div class="sign_in">
+  <p class="sign_in__forget-pass">パスワードを忘れた方は<a href="#">こちら</a>から</p>
+  <p class="sign_in__to-sign_up">登録しましたか？ <a href="/users/sign_up">旅人登録</a></p>
+</div>
 
 <% if user_signed_in? %>
   <% redirect_to root_path %>
