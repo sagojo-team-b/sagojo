@@ -5,7 +5,7 @@
 }
 
 .main-content-wrapper {
-  width: 1090px;
+  width: $base-width;
   height: 1538px;
   padding: 65px 15px 80px;
   margin: 0 auto;
@@ -14,7 +14,7 @@
 }
 // メイン左側
 .left-content {
-  width: 690px;
+  width: $left-width;
   background-color: $snow_gray;
   float: left;
 }
@@ -24,7 +24,7 @@
 }
 
 .job-thumnail {
-  width: 690px;
+  width: $left-width;
   height: 260px;
   background-color: white;
   &:nth-child(n + 2) {
