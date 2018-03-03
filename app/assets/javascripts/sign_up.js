@@ -29,12 +29,33 @@ $(function() {
 
 
   $('#name').showBalloon({
-    position: "top",
+    position: "left",
     contents: "<p>*必須項目です</p>",
     css: {
     backgroundColor: "red",
     opacity: "0.6",
-    color: "white"
+    color: "white",
+    fontSize: "14px"
+    }
+  });
+  $('#email').showBalloon({
+    position: "left",
+    contents: "<p>*必須項目です<br>*メールアドレスが正しくありません</p>",
+    css: {
+    backgroundColor: "red",
+    opacity: "0.6",
+    color: "white",
+    fontSize: "14px"
+    }
+  });
+  $('#password').showBalloon({
+    position: "left",
+    contents: "<p>*必須項目です<br>*6文字以上にしてください</p>",
+    css: {
+    backgroundColor: "red",
+    opacity: "0.6",
+    color: "white",
+    fontSize: "14px"
     }
   });
 });
