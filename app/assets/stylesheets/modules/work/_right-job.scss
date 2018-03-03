@@ -1,0 +1,57 @@
+.work-main-content {
+  width: 1090px;
+  margin: 15px auto;
+  padding-bottom: 80px;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.right {
+  width: 340px;
+  float: right;
+}
+
+.job {
+  list-style: none;
+  float: right;
+  &__list {
+    float: left;
+    width: 165px;
+    background-color: $white;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    &--current {
+      background-color: $yellow;
+      font-weight: bold;
+    }
+    &:nth-child(even) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.job-btn {
+  padding: 25px 10px;
+  text-decoration: none;
+  display: block;
+  &__hover-type {
+    color: $black;
+    &:hover {
+      color: $white;
+      background-color: $yellow;
+      border-radius: 5px;
+    }
+  }
+  &--current {
+    color: $white;
+  }
+  &__num {
+    display: block;
+  }
+}

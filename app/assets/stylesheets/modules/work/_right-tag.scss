@@ -1,0 +1,43 @@
+.tag {
+  float: right;
+  margin-top: 20px;
+  padding: 25px;
+  background-color: $white;
+}
+
+.tag-container {
+  &__header {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $black;
+    margin-bottom: 15px;
+  }
+  &__body {
+    margin-bottom: 15px;
+  }
+}
+
+.tag-main {
+  &__list {
+    display: inline;
+    margin-right: 20px;
+  }
+  &__btn {
+    font-size: 0.8rem;
+    line-height: 2.1;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0 0 4px 18px;
+    text-decoration: none;
+    color: #aeaeae;
+    border-bottom: 1px solid $white;
+    &__image {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      margin-top: -9px;
+    }
+  }
+}
