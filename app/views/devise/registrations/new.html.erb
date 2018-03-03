@@ -19,7 +19,7 @@
   </div>
   <div class="account-box__field">
     <!-- <%= f.label :name %><br /> -->
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "account-box__field__form", placeholder: "お名前" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "account-box__field__form", placeholder: "お名前", id: "name" %>
   </div>
   <p class="name-announce">
     キャリアのアドレスは登録確認メールが届かない事がございます。<br>
@@ -28,19 +28,19 @@
 
   <div class="account-box__field">
     <!-- <%= f.label :email %><br /> -->
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "account-box__field__form", placeholder: "メールアドレス" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "account-box__field__form", placeholder: "メールアドレス", id: "email" %>
   </div>
 
   <div class="account-box__field">
     <!-- <%= f.label :password %> -->
-    <%= f.password_field :password, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード" %>
+    <%= f.password_field :password, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード", id: "password" %>
   </div>
   <% if @minimum_password_length %>
     <p class="pass-length">パスワードは<%= @minimum_password_length %>文字以上にしてください</p>
   <% end %>
   <div class="account-box__field">
     <!-- <%= f.label :password_confirmation %><br /> -->
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード確認" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード確認", id: "re-password" %>
   </div>
 
   <div class="magazine-button">

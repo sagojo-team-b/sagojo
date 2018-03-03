@@ -1,19 +1,10 @@
-/*html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}*/
-
-/** {
-  border: solid 1px red;
-}*/
-
-// bodyの背景が通ったら枠線消す
+html, body {
+  background-color: #EEEEEE;
+}
 
 .account-large-box {
   height: 700px;
   width: 700px;
-  border: solid 1px red;
   background-color: white;
   margin: 50px auto;
 }
@@ -23,7 +14,6 @@
   width: 500px;
   margin: 50px auto;
   background-color: white;
-  border: solid 1px red;
 }
 
 .account-box {
@@ -31,7 +21,6 @@
   width: 500px;
   background-color: white;
   margin: 50px auto;
-  border: solid 1px red;
   padding: 0 0 40px 0;
   &__image {
     height: 100px;
@@ -66,7 +55,6 @@
   &__article {
       height: 280px;
       width: 600px;
-      border: solid 1px red;
       background-color: #888;
       margin: 30px auto 50px;
     p {
