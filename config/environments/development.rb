@@ -54,12 +54,12 @@ Rails.application.configure do
 
   # config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address => 'smtp.gmail.com',
-    :port => 587,
-    :user_name => ENV['TEAMB_EMAIL'], #gmailアドレス
-    :password => ENV['TEAMB_PASS'], #gmailパスワード
-    :authentication => :plain
+    enable_starttls_auto: true,
+    address: 'smtp.gmail.com',
+    port: 587,
+    user_name: ENV['TEAMB_EMAIL'], #gmailアドレス
+    password: ENV['TEAMB_PASS'], #gmailパスワード
+    authentication: :plain
   }
 
   # Use an evented file watcher to asynchronously detect changes in source code,
