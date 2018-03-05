@@ -1,0 +1,10 @@
+.pagination {
+  display: block;
+  margin: 60px 0 20px;
+  text-align: center;
+  &__list {
+    display: inline-block;
+    font-size: 1.0rem;
+    font-weight: bold;
+  }
+}

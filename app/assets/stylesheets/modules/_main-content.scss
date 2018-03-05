@@ -5,7 +5,7 @@
 }
 
 .main-content-wrapper {
-  width: 1090px;
+  width: $base-width;
   height: 1538px;
   padding: 65px 15px 80px;
   margin: 0 auto;
@@ -14,16 +14,22 @@
 }
 // メイン左側
 .left-content {
-  width: 690px;
+  width: $left-width;
   background-color: $snow_gray;
   float: left;
 }
 
+.main-left-content {
+  float: left;
+}
+
 .job-thumnail {
-  width: 690px;
+  width: $left-width;
   height: 260px;
-  margin-top: 20px;
   background-color: white;
+  &:nth-child(n + 2) {
+    margin-top: 20px;
+  }
   &__image {
     width: 260px;
     height: 260px;
@@ -55,14 +61,12 @@
       display: inline-block;
       margin-bottom: 5px;
       font-size: 12px;
-      color: 
-$dark_gray;
+      color: $dark_gray;
     }
     &--thum-job-utility {
       font-size: 11px;
       margin-bottom: 10px;
-      color: 
-$dark_gray;
+      color: $dark_gray;
     }
     &--thum-job-taglist {
       height: 18px;
@@ -280,5 +284,4 @@ $dark_gray;
     text-align: center;
     color: $dark_gray;
   }
-
 }
