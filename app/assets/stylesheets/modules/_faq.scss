@@ -1,0 +1,105 @@
+.faq_wrapper {
+  padding-top: 71px;
+  width: 100%;
+  background-color: $snow_gray;
+}
+
+.faq_main_content {
+  width: 1090px;
+  margin: 15px auto;
+  overflow: auto;
+}
+
+.faq_left_side {
+  width: 290px;
+  float: left;
+}
+
+.faq-nav {
+  &__h1 {
+    font-size: 25px;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 105px;
+    text-align: center;
+    background-image: url('https://d1te0bovbq6epg.cloudfront.net/common/img/faq/bg-faq-nav.svg');
+  }
+
+  &__nav {
+    padding: 30px 25px;
+    background-color: white;
+  }
+}
+
+.for_travelers_list, .for_company_list {
+  display: block;
+  margin-top: 25px;
+  display: none;
+
+  li {
+    margin: 0 0 25px 30px;
+  }
+}
+
+.faq_right_side {
+  width: 790px;
+  float: right;
+}
+
+.faq_right_inner {
+  padding: 5px 15px 40px;
+  background-color: white;
+}
+
+.faq-hdg-01 {
+  font-size: 18px;
+  margin: 35px 0 0 15px;
+  padding-left: 8px;
+  letter-spacing: 2px;
+  border-left: 2px solid $yellow;
+}
+
+.list-faq-01.even {
+  background-color: #f8f8f8;
+}
+
+.list-faq-01 {
+  padding: 25px 0 0 15px;
+  border-bottom: 1px solid $light_gray;
+
+  dt {
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 15px 0 35px;
+
+    .faq-type {
+      color: $yellow;
+      padding-right: 15px;
+      font-size: 20px;
+      vertical-align: middle;
+      position: absolute;
+      top: -6px;
+      left: 0;
+    }
+  }
+
+  dd {
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 15px 0 35px;
+
+    .faq-answer {
+      color: $light_green;
+      padding-right: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      vertical-align: middle;
+      position: absolute;
+      top: -6px;
+      left: 0;
+    }
+  }
+}
