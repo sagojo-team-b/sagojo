@@ -1,13 +1,13 @@
 .four_contents_wrapper {
   width: 100%;
   height: 400px;
-  padding: 150px 0 150px 0;
+  padding: 105px 0;
   background-color: $bright_gray;
   clear: both;
 }
 
 .inner {
-  width: 1090px;
+  width: $base-width;
   height: 100%;
   margin: 0 auto;
 }

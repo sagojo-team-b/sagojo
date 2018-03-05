@@ -1,13 +1,17 @@
-@import 'config/colors';
 @import './reset';
+@import 'config/colors';
+@import 'config/variable';
 @import './slick-theme';
 @import './slick';
 @import 'font-awesome';
 @import 'modules/header';
 @import 'modules/slider';
 @import 'modules/main-content';
-@import 'modules/4-contents';
-@import 'modules/2-contents';
+@import 'modules/sub-nav-4lists';
+@import 'modules/sub-nav-2lists';
 @import 'modules/footer';
-
-
+@import "modules/work/right-job";
+@import "modules/work/right-tag";
+@import "modules/work/eyecatch";
+@import "modules/work/sub-content-select";
+@import "modules/work/pagination";
