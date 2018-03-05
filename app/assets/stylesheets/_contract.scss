@@ -1,0 +1,33 @@
+.main-contents-background {
+  height: 100%;
+  width: 100%;
+  background-color: #EEEEEE;
+  padding-top: 50px;
+  &__contract {
+    padding-top: 46px;
+    &__inner {
+      background-color: white;
+      padding: 100px 50px;
+      margin: 0 15px;
+      h1 {
+        margin-bottom: 30px;
+        font-size: 1.4rem;
+        margin-top: 25px;
+      }
+      h2 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+      p {
+        margin-top: 15px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+
+.clearfix {
+
+}
