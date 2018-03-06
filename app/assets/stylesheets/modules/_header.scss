@@ -109,10 +109,12 @@ body {
     border-radius: 50px;
     text-align: center;
     &__btn {
+      height: 100%;
+      width: 100%;
       text-decoration: none;
       color: $white;
+      padding: 10px 20px;
     }
-
   }
   .sign-in {
     float: left;

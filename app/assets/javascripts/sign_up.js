@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   // 規約利用のチェックボックスの要素を取得して、バルーンを表示
   $('.account-box__field__action__sign-in, .account-box__field__fb').css({opacity: "0.6", cursor: "defult"}).attr("disabled", "disabled");
   $('.convention-btn').attr('checked', false);

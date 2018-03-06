@@ -24,10 +24,10 @@
 .sign_in
   %p.sign_in__forget-pass
     パスワードを忘れた方は
-    %a{:href => "#"}> こちら
+    %a{href: "#"}> こちら
     から
   %p.sign_in__to-sign_up
     登録しましたか？
-    %a{:href => "/users/sign_up"} 旅人登録
+    %a{href: "/users/sign_up"} 旅人登録
 - if user_signed_in?
   - redirect_to root_path

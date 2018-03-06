@@ -124,6 +124,7 @@ html, body {
 }
 
 .sign_up {
+  height: 100px;
   width: 500px;
   margin: 0 auto;
   font-size: 12px;
@@ -134,7 +135,7 @@ html, body {
 
 .sign_in {
   width: 500px;
-  margin: 0 auto;
+  margin: auto;
   font-size: 12px;
   &__forget-pass {
     float: left;
