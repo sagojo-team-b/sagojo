@@ -10,9 +10,14 @@
         登録するには
         %br/
         チェックボックスにチェックを入れてください
-      = f.check_box :convention, class: "convention-btn"
-      = f.label :"利用規約と会員規約とプライバシーポリシーに同意します", class: "convention-button__check"
-      / 利用規約ページができたらlink差し込む
+      %p.convention-button__cover
+        = f.check_box :convention, class: "convention-btn", value: "check"
+        %a{href: "/users/terms_of_service"}> 利用規約
+        と
+        %a{href: "/users/terms_of_service"}> 会員規約
+        と
+        %a{href: "/users/privacy_policy"}> プライバシーポリシー
+        に同意します
     .account-box__field.account-box__field__fb
       %p.account-box__field__facebook Facebookでログイン
     .account-box__field
