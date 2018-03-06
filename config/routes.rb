@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'articles#index'
-  get 'home'          => 'header#home'
-  get 'home/job'      => 'header#job'
-  get 'home/triplab'  => 'header#triplab'
-  get 'home/newcomer' => 'header#newcomer'
-  get 'home/company'  => 'header#company'
-  get 'home/FAQ'      => 'header#faq'
+  get 'home',          to: 'header#home'
+  get 'home/job',      to: 'header#job'
+  get 'home/triplab',  to: 'header#triplab'
+  get 'home/newcomer', to: 'header#newcomer'
+  get 'home/company',  to: 'header#company'
+  get 'home/FAQ',      to: 'header#faq'
 end
