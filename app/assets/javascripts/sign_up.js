@@ -7,7 +7,7 @@ $(function() {
       $('.account-box__field__action__sign-in, .account-box__field__fb').css({opacity: "1", cursor:"pointer"}).removeAttr('disabled');
       $('.convention-btn').hideBalloon({
         position:"top",
-        contents:"<p>＊チェックボックスをチェックしてください</p>",
+        contents:"<p>*チェックボックスをチェックしてください</p>",
         css: {
           backgroundColor: 'red',
           opacity: '0.6',

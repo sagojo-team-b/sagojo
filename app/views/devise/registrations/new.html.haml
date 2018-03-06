@@ -1,0 +1,47 @@
+.account-box
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    .account-box__image
+      = image_tag 'icon-tabibito-01.svg'
+    %p.account-box__title
+      登録してシゴトに応募しよう
+    .convention-button
+      %p.convention-button__text
+        登録するには
+        %br/
+        チェックボックスにチェックを入れてください
+      = f.check_box :convention, class: "convention-btn"
+      = f.label :"利用規約と会員規約とプライバシーポリシーに同意します", class: "convention-button__check"
+      / 利用規約ページができたらlink差し込む
+    .account-box__field.account-box__field__fb
+      %p.account-box__field__facebook Facebookでログイン
+    .account-box__field
+      / <haml_loud> f.label :name </haml_loud><br />
+      = f.text_field :name, autofocus: true, autocomplete: "name", class: "account-box__field__form", placeholder: "お名前", id: "name"
+    %p.name-announce
+      キャリアのアドレスは登録確認メールが届かない事がございます。
+      %br/
+      gmailなどのアドレスをお使いください。
+    .account-box__field
+      / <haml_loud> f.label :email </haml_loud><br />
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: "account-box__field__form", placeholder: "メールアドレス", id: "email"
+    .account-box__field
+      / <haml_loud> f.label :password </haml_loud>
+      = f.password_field :password, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード", id: "password"
+    - if @minimum_password_length
+      %p.pass-length
+        パスワードは#{@minimum_password_length}文字以上にしてください
+    .account-box__field
+      / <haml_loud> f.label :password_confirmation </haml_loud><br />
+      = f.password_field :password_confirmation, autocomplete: "off", class: "account-box__field__form", placeholder: "パスワード確認", id: "re-password"
+    .magazine-button
+      = f.check_box :magazine, checked: true
+      = f.label :"メルマガをご利用になられますか?"
+    .account-box__field
+      = f.submit "メールアドレスで旅人登録", class: "account-box__field__action account-box__field__action__sign-in", redirect_to: "/users/identify"
+.sign_up
+  %p
+    ログインは
+    %a{:href => "/users/sign_in"}> こちら
+    から
+/ <haml_loud> render &quot;devise/shared/links&quot; </haml_loud>
