@@ -118,8 +118,13 @@ html, body {
     color: red;
     font-weight: bold;
   }
-  &__check {
+  &__cover {
     font-size: 12px;
+    color: $black;
+    a {
+      text-decoration: none;
+      color: $light_blue;
+    }
   }
 }
 
