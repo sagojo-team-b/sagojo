@@ -6,7 +6,4 @@ class ArticlesController < ApplicationController
   def show
   end
 
-  def privacy_policy
-  end
-
 end
