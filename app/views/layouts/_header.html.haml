@@ -11,11 +11,18 @@
         %li.header-list__item はじめての方はこちら
         %li.header-list__item 企業の方はこちら
         %li.header-list__item FAQ
-    .header-utility-02
-      .header-utility-02__item.circle-bell
-        .header-utility-02__.fa.fa-bell
-      .header-utility-02__item.circle-comment
-        .header-utility-02__.fa.fa-comment
-      .header-utility-02__item.profile-image
-      .header-utility-02__string.profile-name テスト太郎
-      .header-utility-02.fa.fa-caret-down
+    - if user_signed_in?
+      .header-utility-02
+        .header-utility-02__item.circle-bell
+          .header-utility-02__.fa.fa-bell
+        .header-utility-02__item.circle-comment
+          .header-utility-02__.fa.fa-comment
+        .header-utility-02__item.profile-image
+        .header-utility-02__string.profile-name テスト太郎
+        .header-utility-02.fa.fa-caret-down
+    - else
+      .header-utility-01
+        %ul.header-utility-list-01
+          %li.sign-in= link_to "ログイン", new_user_session_path, class: "sign-in__btn"
+          %li.sign-up= link_to "旅人登録", new_user_registration_path, class: "sign-up__btn"
+
