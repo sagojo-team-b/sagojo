@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end
 
   root 'articles#index'
+  get 'work/recommend', to: 'articles#work_recommend'
 end

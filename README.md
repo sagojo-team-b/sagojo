@@ -1,5 +1,4 @@
 ## users
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
@@ -14,13 +13,12 @@
 
 
 ## articles
-
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 |image|image|null: false|
-|job-type_id|integer|null: false|
-|end-date|integer|null: false|
+|job_type_id|integer|null: false, foreign_key: true|
+|Application_end_date|integer|null: false|
 
 ### Association
 - belongs_to :job-type
@@ -29,7 +27,7 @@
 
 
 
-## job-types
+## job_types
 |Column|Type|Options|
 |------|----|-------|
 |type|string|null: false|
@@ -38,7 +36,8 @@
 - has_many :articles
 
 
-## user_articles
+
+## users_articles
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
@@ -49,7 +48,8 @@
 - belongs_to :article
 
 
-## tag_articles
+
+## tags_articles
 |Column|Type|Options|
 |------|----|-------|
 |article_id|references|null: false, foreign_key: true|
@@ -59,14 +59,6 @@
 - belongs_to :tag
 - belong_to :article
 
-
-## tag_articles
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-
-### Association
-- has_many :articles through :tag_articles
 
 
 ## likes
@@ -78,6 +70,8 @@
 ### Association
 - belongs_to :user
 - belongs_to :article
+
+
 
 ## messages
 |Column|Type|Options|
@@ -92,7 +86,8 @@
 - belongs_to :group
 
 
-## user_groupsテーブル
+
+## users_groups
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -102,7 +97,9 @@
 - belongs_to :user
 - belongs_to :group
 
-## groupsテーブル
+
+
+## groups
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -111,7 +108,9 @@
 - has_many :users through user-groups
 - has_many :messages
 
-## profilesテーブル
+
+
+## profiles
 |Column|Type|Options|
 |------|----|-------|
 |avatar|||
