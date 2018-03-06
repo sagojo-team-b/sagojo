@@ -37,7 +37,7 @@ $(function() {
           backgroundColor: "red",
           opacity: "0.6",
           color: "white",
-          fontSize: "14px"
+          fontSize: "18px"
         }
       });
     } else {
@@ -48,7 +48,7 @@ $(function() {
           backgroundColor: "red",
           opacity: "0.6",
           color: "white",
-          fontSize: "14px"
+          fontSize: "18px"
         }
       });
     }
@@ -63,7 +63,7 @@ $(function() {
           backgroundColor: "red",
           opacity: "0.6",
           color: "white",
-          fontSize: "14px"
+          fontSize: "18px"
         }
       });
     } else {
@@ -74,7 +74,7 @@ $(function() {
           backgroundColor: "red",
           opacity: "0.6",
           color: "white",
-          fontSize: "14px"
+          fontSize: "18px"
         }
       });
     }
@@ -89,7 +89,7 @@ $(function() {
           backgroundColor: "red",
           opacity: "0.6",
           color: "white",
-          fontSize: "14px"
+          fontSize: "18px"
         }
       });
     } else {
@@ -100,7 +100,7 @@ $(function() {
           backgroundColor: "red",
           opacity: "0.6",
           color: "white",
-          fontSize: "14px"
+          fontSize: "18px"
         }
       });
     }

@@ -1,11 +1,11 @@
 html, body {
-  background-color: #EEEEEE;
+  background-color: $light_gray;
 }
 
 .account-large-box {
   height: 700px;
   width: 700px;
-  background-color: white;
+  background-color: $white;
   margin: 50px auto;
 }
 
@@ -13,13 +13,13 @@ html, body {
   height: 500px;
   width: 500px;
   margin: 50px auto;
-  background-color: white;
+  background-color: $white;
 }
 
 .account-box {
   height: 100%;
   width: 500px;
-  background-color: white;
+  background-color: $white;
   margin: 50px auto 0 auto;
   padding-bottom: 40px;
   &__image {
@@ -37,7 +37,7 @@ html, body {
     font-size: 25px;
     span {
       font-size: 14px;
-      color: black;
+      color: $black;
     }
   }
   &__text {
@@ -49,13 +49,13 @@ html, body {
     }
     .complete {
       font-size: 16px;
-      color: #ffcc33;
+      color: $yellow;
     }
   }
   &__article {
       height: 280px;
       width: 600px;
-      background-color: #888;
+      background-color: $gray;
       margin: 30px auto 50px;
     p {
       text-align: center;
@@ -85,7 +85,7 @@ html, body {
       text-align: center;
       font-size: 15px;
       background: none;
-      border: solid 1px #ddd;
+      border: solid 1px $light_gray;
       letter-spacing: 2px;
       outline: none;
     }
@@ -96,8 +96,8 @@ html, body {
       border-radius: 100px;
       text-align: center;
       font-size: 15px;
-      background-color: #FFCC33 ;
-      color: white;
+      background-color: $yellow;
+      color: $white;
     }
   }
   .name-announce, .pass-length {
