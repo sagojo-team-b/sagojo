@@ -1,12 +1,12 @@
 .header-utility-02__list {
   position: absolute;
-  top: 56px;
-  right: 80px;
+  top: 60px;
+  right: 60px;
   border: solid 1px $light_gray;
   background-color: $white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   list-style: none;
-  width: 300px;
+  width: 260px;
   text-align: center;
   margin: 10px auto;
   border-radius: 20px;
@@ -16,10 +16,10 @@
     display: list-item;
     border-bottom: solid 1px $light_gray;
     cursor: pointer;
+    font-size: 12px;
     .menu {
       text-decoration: none;
-      font-size: 14px;
-      color: $dark_gray;
+      color: $gray;
     }
     .sign_out {
       text-decoration: none;
