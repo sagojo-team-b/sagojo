@@ -1,25 +1,29 @@
 .header#header-01
   .header-inner
-    %a.header-logo
-      %img.header-logo__img{src: "https://d1te0bovbq6epg.cloudfront.net/common/img/logo.svg", alt: "SAGOJO"}
-      %p.header-logo__string すごい旅人求人サイト - サゴジョー
+    .header-logo
+      = link_to root_path do
+        %img.header-logo__img{src: "https://d1te0bovbq6epg.cloudfront.net/common/img/logo.svg", alt: "SAGOJO"}
+        %p.header-logo__string すごい旅人求人サイト - サゴジョー
     %nav.header-globalnav-01
       %ul.header-list
-        %li.header-list__item ホーム
-        %li.header-list__item シゴト
+        %li.header-list__item
+          = link_to 'ホーム', root_path
+        %li.header-list__item
+          = link_to 'シゴト', home_job_path
         %li.header-list__item すごい旅研究所
         %li.header-list__item はじめての方はこちら
         %li.header-list__item 企業の方はこちら
-        %li.header-list__item FAQ
+        %li.header-list__item
+          = link_to 'FAQ', home_FAQ_path
     - if user_signed_in?
       .header-utility-02
-        .header-utility-02__item.circle-bell
-          .header-utility-02__.fa.fa-bell
-        .header-utility-02__item.circle-comment
-          .header-utility-02__.fa.fa-comment
-        .header-utility-02__item.profile-image
-        .header-utility-02__string.profile-name テスト太郎
-        .header-utility-02.fa.fa-caret-down
+      .header-utility-02__item.circle-bell
+        .header-utility-02__.fa.fa-bell
+      .header-utility-02__item.circle-comment
+        .header-utility-02__.fa.fa-comment
+      .header-utility-02__item.profile-image
+      .header-utility-02__string.profile-name テスト太郎
+      .header-utility-02.fa.fa-caret-down
     - else
       .header-utility-01
         %ul.header-utility-list-01
