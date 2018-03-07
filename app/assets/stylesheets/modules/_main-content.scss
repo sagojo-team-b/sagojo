@@ -75,6 +75,15 @@
   }
 }
 
+.job-thumnail-btn {
+  color: $black;
+  height: 260px;
+  display: inline-block;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 .thum-job-taglist {
   height: 18px;
   margin-bottom: 10px;
