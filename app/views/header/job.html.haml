@@ -4,6 +4,7 @@
 .work-main-content
   .main-left-content
     = render partial: 'layouts/main-left-content', collection: @articles, as: :article
+    = paginate(@articles)
   .right
     = render 'job/right-job'
     = render 'job/right-tag'
