@@ -1,0 +1,158 @@
+html, body {
+  background-color: $light_gray;
+}
+
+.account-large-box {
+  height: 700px;
+  width: 700px;
+  background-color: $white;
+  margin: 50px auto;
+}
+
+.account-send-box {
+  height: 500px;
+  width: 500px;
+  margin: 50px auto;
+  background-color: $white;
+}
+
+.account-box {
+  height: 100%;
+  width: 500px;
+  background-color: $white;
+  margin: 50px auto 0 auto;
+  padding-bottom: 40px;
+  &__image {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    padding: 50px 0 20px 0;
+    background-color: none;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 25px;
+    span {
+      font-size: 14px;
+      color: $black;
+    }
+  }
+  &__text {
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    span {
+      font-weight: bold;
+    }
+    .complete {
+      font-size: 16px;
+      color: $yellow;
+    }
+  }
+  &__article {
+      height: 280px;
+      width: 600px;
+      background-color: $gray;
+      margin: 30px auto 50px;
+    p {
+      text-align: center;
+    }
+  }
+  &__field {
+    height: 55px;
+    width: 80%;
+    margin: 15px auto;
+    border-radius: 30%;
+    &__facebook {
+      height: 100%;
+      width: 100%;
+      background-color: #3366CC ;
+      color: white;
+      font-size: 15px;
+      text-align: center;
+      margin: 0 auto;
+      border-radius: 100px;
+      border-style: none;
+    }
+    &__form {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 15px;
+      background: none;
+      border: solid 1px $light_gray;
+      letter-spacing: 2px;
+      outline: none;
+    }
+    &__action {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 15px;
+      background-color: $yellow;
+      color: $white;
+    }
+  }
+  .name-announce, .pass-length {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 12px;
+  }
+  .magazine-button {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.convention-button {
+  text-align: center;
+  &__text {
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+  }
+  &__cover {
+    font-size: 12px;
+    color: $black;
+    a {
+      text-decoration: none;
+      color: $light_blue;
+    }
+  }
+}
+
+.sign_up {
+  height: 100px;
+  width: 500px;
+  margin: 0 auto;
+  font-size: 12px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.sign_in {
+  width: 500px;
+  margin: auto;
+  font-size: 12px;
+  &__forget-pass {
+    float: left;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__to-sign_up {
+    float: right;
+    a {
+      text-decoration: none;
+    }
+  }
+}
