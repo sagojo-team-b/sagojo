@@ -7,15 +7,16 @@
     %nav.header-globalnav-01
       %ul.header-list
         %li.header-list__item
-          =link_to 'ホーム', root_path
-        %li.header-list__item シゴト
+          = link_to 'ホーム', root_path
+        %li.header-list__item
+          = link_to 'シゴト', home_job_path
         %li.header-list__item すごい旅研究所
         %li.header-list__item はじめての方はこちら
         %li.header-list__item 企業の方はこちら
         %li.header-list__item
           = link_to 'FAQ', home_FAQ_path
-    - if user_signed_in?      
-    .header-utility-02
+    - if user_signed_in?
+      .header-utility-02
       .header-utility-02__item.circle-bell
         .header-utility-02__.fa.fa-bell
       .header-utility-02__item.circle-comment
