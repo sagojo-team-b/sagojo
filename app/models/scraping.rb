@@ -36,9 +36,12 @@ class Scraping
     image_url = page.at('.job-detail-01 .image img')[:src] if page.at('.job-detail-01 .image img')
     work_content = page.search('.tbl-01 tbody tr:nth-child(2) td').inner_text if page.search('.tbl-01 tbody tr:nth-child(2) td')
     reward = page.search('.tbl-01 tbody tr:nth-child(3) td').inner_text if page.search('.tbl-01 tbody tr:nth-child(3) td')
+
+    # その他リターンのカラムがある場合の処理
     if page.search('.tbl-01 tbody tr').length == 10
       other_reward = page.search('.tbl-01 tbody tr:nth-child(4) td').inner_text if page.search('.tbl-01 tbody tr:nth-child(4) td')
     end
+
     requirements = page.search('.tbl-01 tbody tr:nth-last-child(6) td').inner_text if page.search('.tbl-01 tbody tr:nth-last-child(6) td')
     num_people = page.search('.tbl-01 tbody tr:nth-last-child(5) td').inner_text if page.search('.tbl-01 tbody tr:nth-last-child(5) td')
     travel_period = page.search('.tbl-01 tbody tr:nth-last-child(4) td').inner_text if page.search('.tbl-01 tbody tr:nth-last-child(4) td')
