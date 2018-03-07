@@ -4,6 +4,7 @@ class HeaderController < ApplicationController
   end
 
   def job
+    @articles = Article.limit(10)
   end
 
   def triplab
