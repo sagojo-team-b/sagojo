@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: heroku_7efaa6b44831605
-  username: b429b06991396e
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: sagojo_production
+  username: sagojo
+  password: <%= ENV['SAGOJO_DATABASE_PASSWORD'] %>
