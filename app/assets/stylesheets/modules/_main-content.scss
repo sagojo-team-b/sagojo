@@ -6,11 +6,11 @@
 
 .main-content-wrapper {
   width: $base-width;
-  height: 1538px;
   padding: 65px 15px 80px;
   margin: 0 auto;
   background-color: $snow_gray;
   z-index: 2;
+  @include clearfix();
 }
 // メイン左側
 .left-content {
@@ -148,6 +148,9 @@
   padding: 18px 10px;
   margin-top: 20px;
   text-align: center;
+  text-decoration: none;
+  color: $black;
+  font-weight: bold;
   background-color: white;
 }
 // メイン右側

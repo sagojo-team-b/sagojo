@@ -1,6 +1,13 @@
 = render 'layouts/header'
 = render 'layouts/slider'
-= render 'layouts/main-content'
+.main-wrapper
+  .main-content-wrapper
+    .left-content
+      %p 新着のシゴト
+    .main-left-content
+      = render partial: 'layouts/main-left-content', collection: @articles, as: :article
+      = link_to 'もっと見る', home_job_path, class: "see-more-btn"
+    = render 'layouts/main-right-content'
 = render 'layouts/sub-nav-4lists'
 = render 'layouts/sub-nav-2lists'
 .footer
