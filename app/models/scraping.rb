@@ -5,7 +5,7 @@ class Scraping
     agent = Mechanize.new
     next_url = ""
 
-    while true
+    while true do
       current_page = agent.get("https://www.sagojo.link/work/recommend" + next_url)
       elements = current_page.search('.thum-job-01 a')
       elements.each do |ele|
