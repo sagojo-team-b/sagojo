@@ -1,36 +1,67 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "off"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+= render 'layouts/header'
+.account-cover
+  .account-box
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      = devise_error_messages!
+      .account-box__image
+        .account-box__image__user-image
+          / 本来はユーザーが登録したavatorに差し代わる、仮置き
+          = image_tag 'icon-tabibito-01.svg'
+      %p.account-box__title.edit
+        アカウント設定
+      .account-box__field.edit__field
+        = f.label :名前
+        = f.text_field :name, autofocus: true, autocomplete: "name", class: "account-box__field__form edit_form", value: "#{ current_user.name}", id: "name"
+      .account-box__field.edit__field
+        = f.label :メールアドレス
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "account-box__field__form edit_form", id: "email"
+      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+        %div
+          Currently waiting confirmation for: #{resource.unconfirmed_email}
+      / 仮置き
+      .magazine-button.add-info-title
+        %p メール配信
+        = f.check_box :magazine, checked: true
+        = f.label :"メルマガをご利用になられますか?"
+      / 仮置き
+      .contact-company
+        = f.label :プロフィールの公開範囲
+      .account-box__field.edit__field
+        = f.label :パスワード
+        %br/
+        = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+      / リダイレクト先は仮置き、本来はプロフィール画面
+      .account-box__field.edit__field
+        = f.submit "更新する", class: "account-box__field account-box__field__action-edit", redirect_to: root_path
+      %p.link_password
+        パスワードの設定は
+        %a{href: "#####"}> こちら
+        / リンクは仮置き、本来は別ページにパスワード設定画面
+= render 'layouts/sub-nav-2lists'
+.footer
+  .footer-inner
+    = render 'layouts/footer'
+    = render 'layouts/footer-copyright'
+
+
+/ 仮置き、別ページで使用のため
+/ .account-box__field
+/         = f.label :password
+/         %i (leave blank if you don't want to change it)
+/         %br/
+/         = f.password_field :password, autocomplete: "off"
+/         - if @minimum_password_length
+/           %br/
+/           %em
+/             = @minimum_password_length
+/             characters minimum
+/ .account-box__field
+/   = f.label :password_confirmation
+/   %br/
+/   = f.password_field :password_confirmation, autocomplete: "off"
+
+/ %h3 Cancel my account
+/     %p
+/       Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+/     = link_to "Back", :back
