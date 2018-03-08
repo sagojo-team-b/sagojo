@@ -53,20 +53,22 @@ class Scraping
     single_word = page.at('.side-profile-01 .side-profile-text').inner_text if page.at('.side-profile-01 .side-profile-text')
 
     article = Article.where(title: title).first_or_initialize
-    article.image_url = image_url
-    article.introduction = introduction
-    article.work_content = work_content
-    article.reward = reward
-    article.other_reward = other_reward
-    article.requirements = requirements
-    article.num_people = num_people
-    article.travel_period = travel_period
-    article.area = area
-    article.company = company
-    article.other = other
-    article.application_deadline = application_deadline
-    article.responsible_party_icon = responsible_party_icon
-    article.single_word = single_word
+    article.assign_attributes(
+      image_url: image_url,
+      introduction: introduction,
+      work_content: work_content,
+      reward: reward,
+      other_reward: other_reward,
+      requirements: requirements,
+      num_people: num_people,
+      travel_period: travel_period,
+      area: area,
+      company: company,
+      other: other,
+      application_deadline: application_deadline,
+      responsible_party_icon: responsible_party_icon,
+      single_word: single_word
+      )
     article.save
   end
 end
