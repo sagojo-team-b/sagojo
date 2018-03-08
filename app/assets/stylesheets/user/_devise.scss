@@ -1,5 +1,5 @@
 html, body {
-  background-color: $light_gray;
+  background-color: $snow_gray;
 }
 
 .account-large-box {
@@ -141,6 +141,7 @@ html, body {
 .sign_in {
   width: 500px;
   margin: auto;
+  margin-bottom: 50px;
   font-size: 12px;
   &__forget-pass {
     float: left;

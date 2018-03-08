@@ -17,16 +17,30 @@
           = link_to 'FAQ', home_FAQ_path
     - if user_signed_in?
       .header-utility-02
-      .header-utility-02__item.circle-bell
-        .header-utility-02__.fa.fa-bell
-      .header-utility-02__item.circle-comment
-        .header-utility-02__.fa.fa-comment
-      .header-utility-02__item.profile-image
-      .header-utility-02__string.profile-name テスト太郎
-      .header-utility-02.fa.fa-caret-down
+        .header-utility-02__item.circle-bell
+          .header-utility-02__.fa.fa-bell
+        .header-utility-02__item.circle-comment
+          .header-utility-02__.fa.fa-comment
+        .header-utility-02__item.profile-image
+        .header-utility-02__string.profile-name テスト太郎
+        .header-utility-02.fa.fa-caret-down
+        %ul.header-utility-02__list
+          %li
+            = link_to '応募したシゴト一覧', root_path, class: 'menu'
+          %li
+            = link_to 'お気に入り一覧', root_path, class: 'menu'
+          %li
+            = link_to 'プロフィール編集', root_path, class: 'menu'
+          %li
+            = link_to 'アカウント設定', root_path, class: 'menu'
+          %li.last-list
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'sign_out'
     - else
       .header-utility-01
         %ul.header-utility-list-01
           %li.sign-in= link_to "ログイン", new_user_session_path, class: "sign-in__btn"
           %li.sign-up= link_to "旅人登録", new_user_registration_path, class: "sign-up__btn"
+  / 仮置き
+  %p.notice= notice
+  %p.alert= alert
 
