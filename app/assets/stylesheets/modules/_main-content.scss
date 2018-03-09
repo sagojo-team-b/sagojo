@@ -6,11 +6,11 @@
 
 .main-content-wrapper {
   width: $base-width;
-  height: 1538px;
   padding: 65px 15px 80px;
   margin: 0 auto;
   background-color: $snow_gray;
   z-index: 2;
+  @include clearfix();
 }
 // メイン左側
 .left-content {
@@ -72,6 +72,15 @@
       height: 18px;
       margin-bottom: 10px;
     }
+  }
+}
+
+.job-thumnail-btn {
+  color: $black;
+  height: 260px;
+  display: inline-block;
+  &:hover {
+    opacity: 0.7;
   }
 }
 
@@ -139,6 +148,9 @@
   padding: 18px 10px;
   margin-top: 20px;
   text-align: center;
+  text-decoration: none;
+  color: $black;
+  font-weight: bold;
   background-color: white;
 }
 // メイン右側

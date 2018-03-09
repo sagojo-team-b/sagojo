@@ -18,9 +18,6 @@ Rails.application.routes.draw do
   get 'users/privacy_policy', to: 'users#privacy_policy'
   get 'users/terms_of_service', to: 'users#terms_of_service'
 
-# 旅仕事記事用
-  get 'work/recommend', to: 'articles#work_recommend'
-
 # index
   root 'articles#index'
   get 'home',          to: 'header#home'

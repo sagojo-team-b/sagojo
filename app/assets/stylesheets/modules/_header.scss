@@ -23,6 +23,11 @@
   display: block;
   float: left;
   margin: 5px 68px 0 0;
+  a {
+    text-decoration: none;
+    color: $black;
+    font-weight: bold;
+  }
   &__img {
     width: 118px;
     height: 18px;
@@ -45,6 +50,13 @@
   &__item {
     margin-right: 30px;
     display: inline-block;
+    a {
+      text-decoration: none;
+      color: #808080;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
 

@@ -41,6 +41,9 @@ gem 'rails-pry'
 gem 'devise'
 gem 'omniauth'
 gem 'font-awesome-rails'
+gem 'mechanize'
+gem 'kaminari'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
