@@ -1,5 +1,5 @@
 html, body {
-  background-color: $light_gray;
+  background-color: $snow_gray;
 }
 
 .account-large-box {
@@ -16,11 +16,16 @@ html, body {
   background-color: $white;
 }
 
+.account-cover {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
 .account-box {
   height: 100%;
   width: 500px;
   background-color: $white;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
   padding-bottom: 40px;
   &__image {
     height: 100px;
@@ -35,6 +40,7 @@ html, body {
   &__title {
     text-align: center;
     font-size: 25px;
+    width: 100%;
     span {
       font-size: 14px;
       color: $black;
@@ -99,6 +105,17 @@ html, body {
       background-color: $yellow;
       color: $white;
     }
+    &__action-edit {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 15px;
+      background-color: $light_blue;
+      color: $white;
+      cursor: pointer;
+    }
   }
   .name-announce, .pass-length {
     text-align: center;
@@ -129,7 +146,6 @@ html, body {
 }
 
 .sign_up {
-  height: 100px;
   width: 500px;
   margin: 0 auto;
   font-size: 12px;
@@ -141,6 +157,7 @@ html, body {
 .sign_in {
   width: 500px;
   margin: auto;
+  margin-bottom: 50px;
   font-size: 12px;
   &__forget-pass {
     float: left;

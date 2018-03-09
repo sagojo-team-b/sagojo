@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   $('.bigger_li').on('click', function() {
     $(this).next().slideToggle('fast');
   });

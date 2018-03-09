@@ -1,33 +1,32 @@
-.account-box
-  .account-box__image
-    = image_tag 'icon-sagojokun-01.svg'
-  %p.account-box__title アカウントを入力してログイン
-  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .account-box__field
-      %p.account-box__field__facebook Facebookでログイン
-    .account-box__field
-      / <haml_loud> f.label :email </haml_loud><br />
-      = f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email", class: "account-box__field__form", id: "email_session"
-    .account-box__field
-      / <haml_loud> f.label :password </haml_loud><br />
-      = f.password_field :password, placeholder: "パスワード", autocomplete: "off", class: "account-box__field__form", id: "password_session"
-    /
-      <haml_silent> if devise_mapping.rememberable? </haml_silent><haml_block>
-      <div class="field">
-      <haml_loud> f.check_box :remember_me </haml_loud>
-      <haml_loud> f.label :remember_me </haml_loud>
-      </div>
-      </haml_block>
-    .account-box__field
-      = f.submit "ログイン", class: "account-box__field__action"
-  / <haml_loud> render &quot;devise/shared/links&quot; </haml_loud>
-.sign_in
-  %p.sign_in__forget-pass
-    パスワードを忘れた方は
-    %a{href: "#"}> こちら
-    から
-  %p.sign_in__to-sign_up
-    登録しましたか？
-    %a{href: "/users/sign_up"} 旅人登録
-- if user_signed_in?
-  - redirect_to root_path
+.account-cover
+  .account-box
+    .account-box__image
+      = image_tag 'icon-sagojokun-01.svg'
+    %p.account-box__title アカウントを入力してログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .account-box__field
+        %p.account-box__field__facebook Facebookでログイン
+      .account-box__field
+        = f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email", class: "account-box__field__form", id: "email_session"
+      .account-box__field
+        = f.password_field :password, placeholder: "パスワード", autocomplete: "off", class: "account-box__field__form", id: "password_session"
+      /
+        <haml_silent> if devise_mapping.rememberable? </haml_silent><haml_block>
+        <div class="field">
+        <haml_loud> f.check_box :remember_me </haml_loud>
+        <haml_loud> f.label :remember_me </haml_loud>
+        </div>
+        </haml_block>
+      .account-box__field
+        = f.submit "ログイン", class: "account-box__field__action"
+    / <haml_loud> render &quot;devise/shared/links&quot; </haml_loud>
+  .sign_in
+    %p.sign_in__forget-pass
+      パスワードを忘れた方は
+      %a{href: "#"}> こちら
+      から
+    %p.sign_in__to-sign_up
+      登録しましたか？
+      %a{href: "/users/sign_up"} 旅人登録
+  - if user_signed_in?
+    - redirect_to root_path

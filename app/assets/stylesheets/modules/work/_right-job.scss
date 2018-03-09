@@ -2,11 +2,7 @@
   width: $base-width;
   margin: 15px auto;
   padding-bottom: 80px;
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+  @include clearfix();
 }
 
 .right {
