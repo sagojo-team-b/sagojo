@@ -1,5 +1,5 @@
 .job-thumnail
-  = link_to '#', class: "job-thumnail-btn" do
+  = link_to home_job_detail_path(article), class: "job-thumnail-btn" do
     = image_tag (article.image_url), class: "job-thumnail__image"
     %span.job-thumnail__content
       .job-thumnail__content--company
