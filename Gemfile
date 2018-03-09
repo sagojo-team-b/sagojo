@@ -43,6 +43,7 @@ gem 'omniauth'
 gem 'font-awesome-rails'
 gem 'mechanize'
 gem 'kaminari'
+gem '2.3.1'
 
 
 group :development, :test do
