@@ -7,10 +7,8 @@
       .account-box__field
         %p.account-box__field__facebook Facebookでログイン
       .account-box__field
-        / <haml_loud> f.label :email </haml_loud><br />
         = f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email", class: "account-box__field__form", id: "email_session"
       .account-box__field
-        / <haml_loud> f.label :password </haml_loud><br />
         = f.password_field :password, placeholder: "パスワード", autocomplete: "off", class: "account-box__field__form", id: "password_session"
       /
         <haml_silent> if devise_mapping.rememberable? </haml_silent><haml_block>
