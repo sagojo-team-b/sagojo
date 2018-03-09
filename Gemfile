@@ -43,7 +43,6 @@ gem 'omniauth'
 gem 'font-awesome-rails'
 gem 'mechanize'
 gem 'kaminari'
-gem '2.3.1'
 
 
 group :development, :test do
@@ -68,3 +67,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'rails_12factor'
 end
+
+ruby "2.3.1"
