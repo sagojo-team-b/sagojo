@@ -57,9 +57,13 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "sagojo_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  #本番環境メール設定
+  #以下本番環境メール設定
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
+  #送信する場合
+  # config.action_mailer.delivery_method = :smtp
+  #letter_opener使用時
+  config.action_mailer.delivery_method = :letter_opener_web
+
   host = 'sagojo-team-b-expert.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
@@ -71,6 +75,7 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
+
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
