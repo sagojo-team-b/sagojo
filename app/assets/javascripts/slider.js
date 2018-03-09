@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   $('#slider').slick({
     centerMode: true,
     centerPadding: '160px',
