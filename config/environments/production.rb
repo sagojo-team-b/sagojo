@@ -59,11 +59,7 @@ Rails.application.configure do
 
   #以下本番環境メール設定
   config.action_mailer.raise_delivery_errors = true
-  #送信する場合
-  # config.action_mailer.delivery_method = :smtp
-  #letter_opener使用時
-  config.action_mailer.delivery_method = :letter_opener_web
-
+  config.action_mailer.delivery_method = :smtp
   host = 'sagojo-team-b-expert.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
