@@ -48,7 +48,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.action_mailer.default_url_options = { host: ENV['HOST'] }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   # letter_opner使用時
   config.action_mailer.delivery_method = :letter_opener_web
 
@@ -61,7 +61,7 @@ Rails.application.configure do
     port: 587,
     user_name: ENV['TEAMB_EMAIL'], #gmailアドレス
     password: ENV['TEAMB_PASS'], #gmailパスワード
-    authentication: :plain
+    authentication: :plain,
   }
 
   # Use an evented file watcher to asynchronously detect changes in source code,
