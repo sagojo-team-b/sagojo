@@ -95,7 +95,44 @@
 .sns-list {
   @include clearfix();
   &__item {
+    color: blue;
     float: left;
     margin-right: 10px;
+  }
+}
+
+.job-body-image {
+  margin-top: 40px;
+}
+
+.job-body-text {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  line-height: 2;
+  margin-top: 20px;
+}
+
+.job-body-sns {
+  @include clearfix();
+  &__lower {
+    float: right;
+    margin: 50px 0 25px;
+  }
+}
+
+.job-body-message {
+  margin: 50px 0;
+  &__inner {
+    background: url(https://d1te0bovbq6epg.cloudfront.net/common/img/bg-job-message-01.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.2rem;
+    height: 150px;
+    letter-spacing: 3px;
+    line-height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    width: 460px;
   }
 }
