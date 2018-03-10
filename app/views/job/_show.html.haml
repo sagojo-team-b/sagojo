@@ -1,0 +1,32 @@
+.topic-path
+  .topic-inner
+    = link_to "ホーム", root_path
+    >
+    = link_to "シゴト", home_job_path
+    >
+    = @article.title
+.show-main-content
+  .show-left-content
+    .show-left-inner
+      %article.job-detail
+        %p.job-label
+          PICK
+        .job-header__utility
+          %p.job-status
+            募集中
+          %p.job-item
+            募集終了まで
+            %span.job-date
+              %span.job-remaining-days
+                5
+              %span
+                日
+            %span.job-views
+              275
+              %span
+              views
+        %h1.job-header__title
+          = @article.title
+        .job-header__sns
+          tweet iine bookmark G+
+  .show-right-content
