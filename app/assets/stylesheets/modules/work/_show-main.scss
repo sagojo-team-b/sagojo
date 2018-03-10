@@ -84,7 +84,18 @@
   }
 }
 
+.job-header-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
 
-
-
-
+.sns-list {
+  @include clearfix();
+  &__item {
+    float: left;
+    margin-right: 10px;
+  }
+}
