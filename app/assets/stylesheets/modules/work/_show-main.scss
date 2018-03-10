@@ -1,0 +1,25 @@
+.show-main-content {
+  margin: 0 auto;
+  width: $base-width;
+  @include clearfix();
+}
+
+.topic-path {
+  padding-top: 71px;
+}
+
+.topic-inner {
+  margin-top: 40px;
+}
+
+.topic-content {
+  color: $light-black;
+  font-size: 0.8rem;
+  a {
+    color: $light-black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

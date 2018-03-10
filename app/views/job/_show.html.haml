@@ -1,10 +1,11 @@
 .topic-path
   .topic-inner
-    = link_to "ホーム", root_path
-    >
-    = link_to "シゴト", home_job_path
-    >
-    = @article.title
+    .topic-content
+      = link_to "ホーム", root_path
+      >
+      = link_to "シゴト", home_job_path
+      >
+      = @article.title
 .show-main-content
   .show-left-content
     .show-left-inner
