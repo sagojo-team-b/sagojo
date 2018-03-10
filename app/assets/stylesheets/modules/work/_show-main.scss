@@ -1,4 +1,4 @@
-.show-main-content {
+.show-main-wrapper {
   margin: 0 auto;
   width: $base-width;
   @include clearfix();
@@ -13,13 +13,78 @@
 }
 
 .topic-content {
-  color: $light-black;
+  color: $light_black;
   font-size: 0.8rem;
   a {
-    color: $light-black;
+    color: $light_black;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
   }
 }
+
+.show-main-content {
+  margin-top: 15px;
+  @include clearfix();
+}
+
+.show-left-content {
+  background-color: $white;
+  float: left;
+  width: $left-width;
+}
+
+.job-detail {
+  overflow: hidden;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.job-label {
+  background-color: $light_green;
+  color: $white;
+  font-family: 'Arial Rounded MT', 'Arial Rounded MT Bold';
+  font-size: 0.9rem;
+  padding: 35px 40px 2px 35px;
+  position: absolute;
+  right: -49px;
+  top: -18px;
+  transform: rotate(45deg);
+}
+
+.job-header-utility {
+  @include clearfix();
+}
+
+.job-status {
+  background-color: $yellow;
+  border-radius: 7px;
+  color: $white;
+  float: left;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+}
+
+.job-item {
+  color: $dark_gray;
+  float: right;
+  font-size: 0.7rem;
+  margin: 0 30px 10px 0;
+  &__days {
+    color: $yellow;
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  &__views {
+    border-left: 1px solid $light_gray;
+    margin-left: 5px;
+    padding-left: 8px;
+  }
+}
+
+
+
+
+

@@ -12,22 +12,21 @@
       %article.job-detail
         %p.job-label
           PICK
-        .job-header__utility
+        .job-header-utility
           %p.job-status
             募集中
           %p.job-item
             募集終了まで
-            %span.job-date
-              %span.job-remaining-days
-                5
-              %span
-                日
-            %span.job-views
+            %span.job-item__days
+              5
+            %span
+              日
+            %span.job-item__views
               275
-              %span
+            %span
               views
-        %h1.job-header__title
+        %h1.job-header-title
           = @article.title
-        .job-header__sns
+        .job-header-sns
           tweet iine bookmark G+
   .show-right-content
