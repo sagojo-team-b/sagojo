@@ -181,7 +181,7 @@
   background-color: $light_green;
   border-radius: 50%;
   color: $white;
-  display: inline-block;
+  display: block;
   float: left;
   font-size: 0.8rem;
   height: 35px;
@@ -202,4 +202,67 @@
     color: $dark_gray;
     font-size: 0.8rem;
   }
+}
+
+.application-btn {
+  background-color: $snow_gray;
+  margin-top: 35px;
+  padding: 25px 20px;
+  @include clearfix();
+}
+
+.application-like {
+  float: left;
+  margin-right: 20px;
+  &__upper {
+    align-items: center;
+    background-color: $white;
+    border: 1.5px solid $light_gray;
+    border-radius: 65px;
+    box-sizing: border-box;
+    color: $black;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: bold;
+    height: 65px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    width: 230px;
+    &:before {
+      background: url(https://d1te0bovbq6epg.cloudfront.net/common/img/img_star_off.svg);
+      background-color: $snow_gray;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 36px;
+      content: "";
+      height:36px;
+      margin: 0 10px;
+      width:36px;
+    }
+  }
+}
+
+.application-apply {
+  float: left;
+  &__upper {
+    background-color: $yellow;
+    border-radius: 65px;
+    color: $white;
+    display: block;
+    font-size: 1.0rem;
+    font-weight: bold;
+    height: 65px;
+    letter-spacing: 3px;
+    line-height: 65px;
+    text-align: center;
+    text-decoration: none;
+    width: 360px;
+  }
+}
+
+.application-btn-item {
+  color: $dark_gray;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-align: center;
 }

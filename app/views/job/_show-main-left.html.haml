@@ -140,3 +140,18 @@
                   旅が仕事に！
                 %dd.flow-data-list__lower
                   実際に旅をして、シゴトを実行していただきます。
+        .application-btn
+          .application-like
+            = link_to "お気に入りに追加", "", class: "application-like__upper"
+            %p.application-btn-item.application-like__lower
+              現在
+              %span
+                6
+              人がお気に入り登録済み
+          .application-apply
+            = link_to "応募画面へ進む", "#", class: "application-apply__upper"
+            %p.application-btn-item.application-apply__lower
+              現在
+              %span
+                8
+              人が応募済みです
