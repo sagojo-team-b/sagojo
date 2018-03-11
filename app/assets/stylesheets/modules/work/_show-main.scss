@@ -141,6 +141,7 @@
   font-size: 1.0rem;
   letter-spacing: 1px;
   line-height: 2;
+  margin-bottom: 30px;
   width: 100%;
   th {
     background-color: $snow_gray;
@@ -157,18 +158,48 @@
   }
 }
 
+.application-flow {
+  border: 10px solid $light_gray;
+  padding: 25px 45px;
+  &__header {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
 
+.application-flow-list {
+  border-bottom: 1px solid $light_gray;
+  padding: 20px 0;
+  @include clearfix();
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
+}
 
+.flow-list-num {
+  background-color: $light_green;
+  border-radius: 50%;
+  color: $white;
+  display: inline-block;
+  float: left;
+  font-size: 0.8rem;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  width: 35px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.flow-data-list {
+  float: left;
+  margin-left: 15px;
+  &__upper {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &__lower {
+    color: $dark_gray;
+    font-size: 0.8rem;
+  }
+}

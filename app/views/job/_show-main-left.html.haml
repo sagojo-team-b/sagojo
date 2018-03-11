@@ -104,4 +104,39 @@
               その他
             %td
               = @article.other
-
+        .application-flow
+          %h2.application-flow__header
+            応募の流れ
+          %ol.application-flow__body
+            %li.application-flow-list
+              %span.flow-list-num
+                1
+              %dl.flow-data-list
+                %dt.flow-data-list__upper
+                  応募締め切り
+                %dd.flow-data-list__lower
+                  = @article.application_deadline
+            %li.application-flow-list
+              %span.flow-list-num
+                2
+              %dl.flow-data-list
+                %dt.flow-data-list__upper
+                  選出された方へ連絡
+                %dd.flow-data-list__lower
+                  応募の中から選出された方には、締切日から2週間以内にご連絡いたします。
+            %li.application-flow-list
+              %span.flow-list-num
+                3
+              %dl.flow-data-list
+                %dt.flow-data-list__upper
+                  面接へ進む
+                %dd.flow-data-list__lower
+                  SAGOJO・企業と面接させていただきます。
+            %li.application-flow-list
+              %span.flow-list-num
+                4
+              %dl.flow-data-list
+                %dt.flow-data-list__upper
+                  旅が仕事に！
+                %dd.flow-data-list__lower
+                  実際に旅をして、シゴトを実行していただきます。
