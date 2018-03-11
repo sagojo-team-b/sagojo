@@ -136,3 +136,39 @@
     width: 460px;
   }
 }
+
+.job-footer-table {
+  font-size: 1.0rem;
+  letter-spacing: 1px;
+  line-height: 2;
+  width: 100%;
+  th {
+    background-color: $snow_gray;
+    border: 1px solid $light_gray;
+    box-sizing: border-box;
+    font-weight: bold;
+    padding: 15px;
+    width: 30%;
+  }
+  td {
+    border: 1px solid $light_gray;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -54,4 +54,54 @@
         .job-body-message
           %p.job-body-message__inner
             さあ、旅に出てみませんか？
-      .sub-recommend
+        %table.job-footer-table
+          %tr
+            %th{ colspan: 2 }
+              募集概要
+          %tr
+            %th
+              シゴト内容
+            %td
+              = @article.work_content
+          %tr
+            %th
+              リターン（報酬）
+            %td
+              = @article.reward
+          - if @article.other_reward
+            %tr
+              %th
+                その他リターン
+              %td
+                = @article.other_reward
+          %tr
+            %th
+              応募資格
+            %td
+              = @article.requirements
+          %tr
+            %th
+              募集人数
+            %td
+              = @article.num_people
+          %tr
+            %th
+              旅の期間
+            %td
+              = @article.travel_period
+          %tr
+            %th
+              エリア
+            %td
+              = @article.area
+          %tr
+            %th
+              企業名
+            %td
+              = @article.company
+          %tr
+            %th
+              その他
+            %td
+              = @article.other
+
