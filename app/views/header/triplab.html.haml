@@ -2,8 +2,10 @@
 = render 'triplab/eyecatch'
 = render 'triplab/sub-content-select'
 .work-main-content
-  = render 'triplab/left-content'
-  / = render 'triplab/pagination'
+  .inner-triplab
+    .thum-column-area
+      = render partial: 'triplab/left-content', collection: @triplab_articles, as: :triplab_article
+    = paginate(@triplab_articles)
   .right
     = render 'triplab/right-job'
     = render 'triplab/right-tag'
