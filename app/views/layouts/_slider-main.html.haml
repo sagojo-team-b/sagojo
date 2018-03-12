@@ -1,0 +1,27 @@
+%li.slider_main_li
+  %a.slider_main_a
+    .slider_main_content
+      = image_tag (slider_article.image_url), class: "slider_main_content__image"
+      .count
+        %img.count__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/slider/img_hukidashi.svg" }
+        %p.count__p あと4日
+      .slider_link
+        %p.slider_link__company
+          = slider_article.company
+        %p.slider_link__title
+          = slider_article.title
+        .slider_link_inner-01
+          %img.slider_link_inner-01__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-money-white.svg" }
+          %p.slider_link_inner-01__p
+            = slider_article.reward
+        %ul
+          %li.slider_link_inner-02_li
+            %img.slider_link_inner-02_li__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-02.svg" }
+            %p.slider_link_inner-02_li__p 写真
+          %li.slider_link_inner-02_li
+            %img.slider_link_inner-02_li__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-02.svg" }
+            %p.slider_link_inner-02_li__p 世界どこでも
+          %li.slider_link_inner-02_li
+            %img.slider_link_inner-02_li__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-02.svg" }
+            %p.slider_link_inner-02_li__p カメラマン
+          %a.detail_button シゴト詳細へ
