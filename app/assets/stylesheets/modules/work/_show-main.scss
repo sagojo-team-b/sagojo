@@ -354,3 +354,23 @@
     width: 14px;
   }
 }
+
+.side-job-like {
+  padding: 20px;
+  &__btn {
+    font-weight: normal;
+    margin: 0 auto;
+    width: 100%;
+    &:before {
+      margin-left: 40px;
+    }
+  }
+}
+
+.side-job-application {
+  background-color: $bright_gray;
+  padding: 20px;
+  &__btn {
+    width: 100%;
+  }
+}
