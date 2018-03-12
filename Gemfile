@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'haml-rails'
 gem 'erb2haml'
-gem 'rails-pry'
+gem 'pry-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'font-awesome-rails'
