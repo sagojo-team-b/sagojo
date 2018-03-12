@@ -3,12 +3,12 @@ class LikesController < ApplicationController
 
   def like
     like = current_user.likes.new(article_id: @article.id)
-    like.save
+    like.save!
   end
 
   def unlike
     like = current_user.likes.find_by(article_id: @article.id)
-    like.destroy
+    like.destroy!
   end
 
   private
