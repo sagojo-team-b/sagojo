@@ -1,6 +1,6 @@
 .job-thumnail
   = link_to home_job_detail_path(article), class: "job-thumnail-btn" do
-    = image_tag (article.image_url), class: "job-thumnail__image"
+    = image_tag (article.thumbnail), class: "job-thumnail__image"
     %span.job-thumnail__content
       .job-thumnail__content--company
         %img.job-thumnail__content--company-image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-company.svg" }
