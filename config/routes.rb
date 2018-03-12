@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   get 'users/terms_of_service', to: 'users#terms_of_service'
 
 # like機能用
-  post '/like/:article_id', to: 'likes#like', as: 'like'
-  delete '/like/:article_id', to: 'likes#unlike', as: 'unlike'
+  post '/likes/:article_id', to: 'likes#like', as: 'like'
+  delete '/likes/:article_id', to: 'likes#unlike', as: 'unlike'
 
 # index
   root 'articles#index'
