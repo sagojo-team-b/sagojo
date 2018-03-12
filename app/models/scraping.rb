@@ -71,4 +71,52 @@ class Scraping
       )
     article.save
   end
+
+  def self.triplab_articles_urls
+    links = []
+    agent = Mechanize.new
+    next_url = ""
+
+    loop do
+      current_page = agent.get('https://www.sagojo.link/sugoi-labo/latest' + next_url)
+      elements = current_page.search('.thum-column-02 a')
+      elements.each do |ele|
+        links << ele[:href]
+      end
+
+      next_link = current_page.at('.pagination .next a')
+      break unless next_link
+      next_url = next_link[:href]
+      next_url.slice!('/sugoi-labo/latest')
+    end
+
+    links.each do |link|
+      get_articles('https://www.sagojo.link' + link)
+    end
+  end
+
+  def self.get_articles(link)
+    agent = Mechanize.new
+    page = agent.get(link)
+
+    image_url = page.at('.column-detail-01 .image img')[:src] if page.at('.column-detail-01 .image img')
+    job_type_tag = page.at('.column-detail-01 .utility-01 .category').inner_text if page.at('.column-detail-01 .utility-01 .category')
+    title = page.at('.column-detail-01 .hdg-lv1-01').inner_text
+    writer_image_url = page.at('.side-profile-01 .image.writer img')[:src] if page.at('.side-profile-01 .image.writer img')
+    writer_name = page.at('.side-profile-01 .side-profile-title').inner_text.delete!('ライター：') if page.at('.side-profile-01 .side-profile-title')
+    text = page.at('.column-detail-01 .utility').inner_text if page.at('.column-detail-01 .utility')
+    up_date = text.slice!(0, 10)
+    view_number = text
+
+    article = TriplabArticle.where(title: title).first_or_initialize
+    article.assign_attributes(
+      image_url: image_url,
+      job_type_tag: job_type_tag,
+      writer_image_url: writer_image_url,
+      writer_name: writer_name,
+      up_date: up_date,
+      view_number: view_number
+      )
+    article.save
+  end
 end
