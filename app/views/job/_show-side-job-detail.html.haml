@@ -1,0 +1,33 @@
+.side-job-detail
+  .job-detail-inner.side-job-type
+    = image_tag "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-category.svg", class: "job-detail-image job-detail-image--arrange"
+    %p.job-detail-text
+      記事執筆
+  .job-detail-inner.side-job-company
+    = image_tag "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-company.svg", class: "job-detail-image"
+    %p.job-detail-text
+      = @article.company
+  .job-detail-inner.side-job-money
+    = image_tag "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-money.svg", class: "job-detail-image"
+    %p.job-detail-text
+      = @article.reward
+  .job-detail-inner.side-job-tag
+    = image_tag "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-01.svg", class: "job-detail-image"
+    %ul.job-detail-tag
+      %li.job-detail-tag__list
+        = link_to "#", class: "tag-list-btn" do
+          取材あり
+      %li.job-detail-tag__list
+        = link_to "#", class: "tag-list-btn" do
+          写真
+      %li.job-detail-tag__list
+        = link_to "#", class: "tag-list-btn" do
+          記事執筆
+      %li.job-detail-tag__list
+        = link_to "#", class: "tag-list-btn" do
+          ライター
+      %li.job-detail-tag__list
+        = link_to "#", class: "tag-list-btn" do
+          日本全国
+  .side-job-like
+  .side-job-application

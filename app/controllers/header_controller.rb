@@ -8,6 +8,7 @@ class HeaderController < ApplicationController
   end
 
   def show
+    @articles = Article.limit(3)
     @article = Article.find(params[:id])
   end
 

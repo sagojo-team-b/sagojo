@@ -1,157 +1,147 @@
-.topic-path
-  .topic-inner
-    .topic-content
-      = link_to "ホーム", root_path
-      >
-      = link_to "シゴト", home_job_path
-      >
-      = @article.title
-.show-main-content
-  .show-left-content
-    .show-left-inner
-      %article.job-detail
-        %p.job-label
-          PICK
-        .job-header-utility
-          %p.job-status
-            募集中
-          %p.job-item
-            募集終了まで
-            %span.job-item__days
-              5
-            %span
-              日
-            %span.job-item__views
-              275
-            %span
-              views
-        %h1.job-header-title
-          = @article.title
-        .job-header-sns
-          %ul.sns-list
-            %li.sns-list__item
-              tweet
-            %li.sns-list__item
-              iine
-            %li.sns-list__item
-              bookmark
-            %li.sns-list__item
-              g+
-        = image_tag (@article.image_url), class: "job-body-image"
-        - 5.times do |i|
-          %p.job-body-text
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ratione error minus optio repellat nisi distinctio quibusdam mollitia excepturi deleniti a facilis, illum aliquam, ab itaque nesciunt quidem dicta adipisci repellendus assumenda totam impedit. Praesentium culpa nulla velit a, incidunt odio officia repudiandae? Pariatur repellendus, harum necessitatibus facilis ratione quas.
-        .job-body-sns
-          %ul.sns-list.job-body-sns__lower
-            %li.sns-list__item
-              tweet
-            %li.sns-list__item
-              iine
-            %li.sns-list__item
-              bookmark
-            %li.sns-list__item
-              g+
-        .job-body-message
-          %p.job-body-message__inner
-            さあ、旅に出てみませんか？
-        %table.job-footer-table
-          %tr
-            %th{ colspan: 2 }
-              募集概要
-          %tr
-            %th
-              シゴト内容
-            %td
-              = @article.work_content
-          %tr
-            %th
-              リターン（報酬）
-            %td
-              = @article.reward
-          - if @article.other_reward
-            %tr
-              %th
-                その他リターン
-              %td
-                = @article.other_reward
-          %tr
-            %th
-              応募資格
-            %td
-              = @article.requirements
-          %tr
-            %th
-              募集人数
-            %td
-              = @article.num_people
-          %tr
-            %th
-              旅の期間
-            %td
-              = @article.travel_period
-          %tr
-            %th
-              エリア
-            %td
-              = @article.area
-          %tr
-            %th
-              企業名
-            %td
-              = @article.company
-          %tr
-            %th
-              その他
-            %td
-              = @article.other
-        .application-flow
-          %h2.application-flow__header
-            応募の流れ
-          %ol.application-flow__body
-            %li.application-flow-list
-              %span.flow-list-num
-                1
-              %dl.flow-data-list
-                %dt.flow-data-list__upper
-                  応募締め切り
-                %dd.flow-data-list__lower
-                  = @article.application_deadline
-            %li.application-flow-list
-              %span.flow-list-num
-                2
-              %dl.flow-data-list
-                %dt.flow-data-list__upper
-                  選出された方へ連絡
-                %dd.flow-data-list__lower
-                  応募の中から選出された方には、締切日から2週間以内にご連絡いたします。
-            %li.application-flow-list
-              %span.flow-list-num
-                3
-              %dl.flow-data-list
-                %dt.flow-data-list__upper
-                  面接へ進む
-                %dd.flow-data-list__lower
-                  SAGOJO・企業と面接させていただきます。
-            %li.application-flow-list
-              %span.flow-list-num
-                4
-              %dl.flow-data-list
-                %dt.flow-data-list__upper
-                  旅が仕事に！
-                %dd.flow-data-list__lower
-                  実際に旅をして、シゴトを実行していただきます。
-        .application-btn
-          .application-like
-            = link_to "お気に入りに追加", "", class: "application-like__upper"
-            %p.application-btn-item.application-like__lower
-              現在
-              %span
-                6
-              人がお気に入り登録済み
-          .application-apply
-            = link_to "応募画面へ進む", "#", class: "application-apply__upper"
-            %p.application-btn-item.application-apply__lower
-              現在
-              %span
-                8
-              人が応募済みです
+%article.job-detail
+  %p.job-label
+    PICK
+  .job-header-utility
+    %p.job-status
+      募集中
+    %p.job-item
+      募集終了まで
+      %span.job-item__days
+        5
+      %span
+        日
+      %span.job-item__views
+        275
+      %span
+        views
+  %h1.job-header-title
+    = @article.title
+  .job-header-sns
+    %ul.sns-list
+      %li.sns-list__item
+        tweet
+      %li.sns-list__item
+        iine
+      %li.sns-list__item
+        bookmark
+      %li.sns-list__item
+        g+
+  = image_tag (@article.image_url), class: "job-body-image"
+  - 5.times do |i|
+    %p.job-body-text
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ratione error minus optio repellat nisi distinctio quibusdam mollitia excepturi deleniti a facilis, illum aliquam, ab itaque nesciunt quidem dicta adipisci repellendus assumenda totam impedit. Praesentium culpa nulla velit a, incidunt odio officia repudiandae? Pariatur repellendus, harum necessitatibus facilis ratione quas.
+  .job-body-sns
+    %ul.sns-list.job-body-sns__lower
+      %li.sns-list__item
+        tweet
+      %li.sns-list__item
+        iine
+      %li.sns-list__item
+        bookmark
+      %li.sns-list__item
+        g+
+  .job-body-message
+    %p.job-body-message__inner
+      さあ、旅に出てみませんか？
+  %table.job-footer-table
+    %tr
+      %th{ colspan: 2 }
+        募集概要
+    %tr
+      %th
+        シゴト内容
+      %td
+        = @article.work_content
+    %tr
+      %th
+        リターン（報酬）
+      %td
+        = @article.reward
+    - if @article.other_reward
+      %tr
+        %th
+          その他リターン
+        %td
+          = @article.other_reward
+    %tr
+      %th
+        応募資格
+      %td
+        = @article.requirements
+    %tr
+      %th
+        募集人数
+      %td
+        = @article.num_people
+    %tr
+      %th
+        旅の期間
+      %td
+        = @article.travel_period
+    %tr
+      %th
+        エリア
+      %td
+        = @article.area
+    %tr
+      %th
+        企業名
+      %td
+        = @article.company
+    %tr
+      %th
+        その他
+      %td
+        = @article.other
+  .application-flow
+    %h2.application-flow__header
+      応募の流れ
+    %ol.application-flow__body
+      %li.application-flow-list
+        %span.flow-list-num
+          1
+        %dl.flow-data-list
+          %dt.flow-data-list__upper
+            応募締め切り
+          %dd.flow-data-list__lower
+            = @article.application_deadline
+      %li.application-flow-list
+        %span.flow-list-num
+          2
+        %dl.flow-data-list
+          %dt.flow-data-list__upper
+            選出された方へ連絡
+          %dd.flow-data-list__lower
+            応募の中から選出された方には、締切日から2週間以内にご連絡いたします。
+      %li.application-flow-list
+        %span.flow-list-num
+          3
+        %dl.flow-data-list
+          %dt.flow-data-list__upper
+            面接へ進む
+          %dd.flow-data-list__lower
+            SAGOJO・企業と面接させていただきます。
+      %li.application-flow-list
+        %span.flow-list-num
+          4
+        %dl.flow-data-list
+          %dt.flow-data-list__upper
+            旅が仕事に！
+          %dd.flow-data-list__lower
+            実際に旅をして、シゴトを実行していただきます。
+    / 応募期限が過ぎたやつは表示しない
+  .application-btn
+    .application-like
+      = link_to "お気に入りに追加", "", class: "application-like__upper"
+      %p.application-btn-item.application-like__lower
+        現在
+        %span
+          6
+        人がお気に入り登録済み
+    .application-apply
+      = link_to "応募画面へ進む", "#", class: "application-apply__upper"
+      %p.application-btn-item.application-apply__lower
+        現在
+        %span
+          8
+        人が応募済みです

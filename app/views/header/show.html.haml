@@ -1,6 +1,14 @@
 = render 'layouts/header'
 .show-main-wrapper
-  = render 'job/show-main-left'
+  = render 'job/show-main-nav'
+  .show-main-content
+    .show-left-content
+      .show-left-inner
+        = render 'job/show-main-left'
+        = render 'job/show-sub-recomend'
+    .show-right-content
+      = render 'job/show-side-profile'
+      = render 'job/show-side-job-detail'
 = render 'layouts/sub-nav-4lists'
 = render 'layouts/sub-nav-2lists'
 .footer
