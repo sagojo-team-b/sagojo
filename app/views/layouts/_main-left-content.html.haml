@@ -27,9 +27,7 @@
             %img.inner-02__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-object.svg" }
             %p.inner-02__p 他リターンあり
   - if user_signed_in?
-    .like-link{id: "like-link-#{article.id}"}
-      =render 'likes/like_links', article: article
+    =render 'likes/like_links', article: article
   - else
-    .like-link{id: "like-link-#{article.id}"}
-      = link_to new_user_session_path do
-        = image_tag 'img_star_off', class: 'btn unlike-btn', id: "star-#{article.id}"
+    = link_to new_user_session_path do
+      = image_tag 'img_star_off', class: 'btn unlike-btn', id: "star-#{article.id}"
