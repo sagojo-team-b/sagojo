@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :set_variables
+  before_action :set_variables, only: [:like, :unlike]
 
   def like
     like = current_user.likes.new(article_id: @article.id)
@@ -9,6 +9,10 @@ class LikesController < ApplicationController
   def unlike
     like = current_user.likes.find_by(article_id: @article.id)
     like.destroy
+  end
+
+  def show
+    @articles = Like.where(user_id: current_user.id).all
   end
 
   private
