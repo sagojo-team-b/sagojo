@@ -1,0 +1,6 @@
+.side-profile
+  = image_tag (@article.responsible_party_icon), class: "side-profile__image"
+  .side-profile__title
+    担当者さまから一言
+  .side-profile__body
+    = @article.single_word

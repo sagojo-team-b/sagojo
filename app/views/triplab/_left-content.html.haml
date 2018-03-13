@@ -1,0 +1,23 @@
+.thum-column-02
+  =image_tag (triplab_article.image_url), class: 'main_image'
+  %p.thum-column-label NEW
+  .thum-column-02__content
+    %p.thum-column-category
+      = triplab_article.job_type_tag
+    %h3.thum-column-title
+      = triplab_article.title
+    .thum-column-utility
+      %p.utility-01
+        =image_tag(triplab_article.writer_image_url)
+        = triplab_article.writer_name
+      %p.utility-02
+        = triplab_article.up_date
+        |
+        = triplab_article.view_number
+        views
+  .thum-column-02__g-pb10
+    %ul.thum-job-taglist__ul
+      %li
+        %img.thum-job-taglist__ul--image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-02.svg" }
+        %p.thum-job-taglist__ul--li 動画
+/ = render 'triplab/pagination'
