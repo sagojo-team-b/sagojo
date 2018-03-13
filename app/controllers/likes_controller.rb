@@ -12,7 +12,10 @@ class LikesController < ApplicationController
   end
 
   def show
-    @articles = Like.where(user_id: current_user.id).all
+    @likes = Like.where(user_id: current_user.id).all
+    @articles = @likes.map {|like|
+      Article.find(like.article_id)
+    }
   end
 
   private
