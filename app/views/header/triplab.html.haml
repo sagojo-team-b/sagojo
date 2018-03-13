@@ -1,0 +1,17 @@
+= render 'layouts/header'
+= render 'triplab/eyecatch'
+= render 'triplab/sub-content-select'
+.work-main-content
+  .inner-triplab
+    .thum-column-area
+      = render partial: 'triplab/left-content', collection: @triplab_articles, as: :triplab_article
+    = paginate(@triplab_articles)
+  .right
+    = render 'triplab/right-job'
+    = render 'triplab/right-tag'
+= render 'layouts/sub-nav-4lists'
+= render 'layouts/sub-nav-2lists'
+.footer
+  .footer-inner
+    = render 'layouts/footer'
+    = render 'layouts/footer-copyright'

@@ -1,0 +1,376 @@
+.show-main-wrapper {
+  margin: 0 auto;
+  width: $base-width;
+  @include clearfix();
+}
+
+.topic-path {
+  padding-top: 71px;
+}
+
+.topic-inner {
+  margin-top: 40px;
+}
+
+.topic-content {
+  color: $light_black;
+  font-size: 0.8rem;
+  a {
+    color: $light_black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.show-main-content {
+  margin-top: 15px;
+  @include clearfix();
+}
+
+.show-left-content {
+  float: left;
+  width: $left-width;
+}
+
+.job-detail {
+  background-color: $white;
+  overflow: hidden;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.job-label {
+  background-color: $light_green;
+  color: $white;
+  font-family: 'Arial Rounded MT', 'Arial Rounded MT Bold';
+  font-size: 0.9rem;
+  padding: 35px 40px 2px 35px;
+  position: absolute;
+  right: -49px;
+  top: -18px;
+  transform: rotate(45deg);
+}
+
+.job-header-utility {
+  @include clearfix();
+}
+
+.job-status {
+  background-color: $yellow;
+  border-radius: 7px;
+  color: $white;
+  float: left;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+}
+
+.job-item {
+  color: $dark_gray;
+  float: right;
+  font-size: 0.7rem;
+  margin: 0 30px 10px 0;
+  &__days {
+    color: $yellow;
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  &__views {
+    border-left: 1px solid $light_gray;
+    margin-left: 5px;
+    padding-left: 8px;
+  }
+}
+
+.job-header-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.sns-list {
+  @include clearfix();
+  &__item {
+    color: blue;
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.job-body-image {
+  margin: 40px 0 0 -20px;
+}
+
+.job-body-text {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  line-height: 2;
+  margin-top: 20px;
+}
+
+.job-body-sns {
+  @include clearfix();
+  &__lower {
+    float: right;
+    margin: 50px 0 25px;
+  }
+}
+
+.job-body-message {
+  margin: 50px 0;
+  &__inner {
+    background: url(https://d1te0bovbq6epg.cloudfront.net/common/img/bg-job-message-01.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.2rem;
+    height: 150px;
+    letter-spacing: 3px;
+    line-height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    width: 460px;
+  }
+}
+
+.job-footer-table {
+  font-size: 1.0rem;
+  letter-spacing: 1px;
+  line-height: 2;
+  margin-bottom: 30px;
+  width: 100%;
+  th {
+    background-color: $snow_gray;
+    border: 1px solid $light_gray;
+    box-sizing: border-box;
+    font-weight: bold;
+    padding: 15px;
+    width: 30%;
+  }
+  td {
+    border: 1px solid $light_gray;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+}
+
+.application-flow {
+  border: 10px solid $light_gray;
+  padding: 25px 45px;
+  &__header {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.application-flow-list {
+  border-bottom: 1px solid $light_gray;
+  padding: 20px 0;
+  @include clearfix();
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+
+.flow-list-num {
+  background-color: $light_green;
+  border-radius: 50%;
+  color: $white;
+  display: block;
+  float: left;
+  font-size: 0.8rem;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  width: 35px;
+}
+
+.flow-data-list {
+  float: left;
+  margin-left: 15px;
+  &__upper {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &__lower {
+    color: $dark_gray;
+    font-size: 0.8rem;
+  }
+}
+
+.application-btn {
+  background-color: $snow_gray;
+  margin-top: 35px;
+  padding: 25px 20px;
+  @include clearfix();
+}
+
+.application-like {
+  float: left;
+  margin-right: 20px;
+  &__upper {
+    align-items: center;
+    background-color: $white;
+    border: 1.5px solid $light_gray;
+    border-radius: 65px;
+    box-sizing: border-box;
+    color: $black;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: bold;
+    height: 65px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    width: 230px;
+    &:before {
+      background: url(https://d1te0bovbq6epg.cloudfront.net/common/img/img_star_off.svg);
+      background-color: $snow_gray;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 36px;
+      content: "";
+      height:36px;
+      margin: 0 10px;
+      width:36px;
+    }
+  }
+}
+
+.application-apply {
+  float: left;
+  &__upper {
+    background-color: $yellow;
+    border-radius: 65px;
+    color: $white;
+    display: block;
+    font-size: 1.0rem;
+    font-weight: bold;
+    height: 65px;
+    letter-spacing: 3px;
+    line-height: 65px;
+    text-align: center;
+    text-decoration: none;
+    width: 360px;
+  }
+}
+
+.application-btn-item {
+  color: $dark_gray;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sub-recomend {
+  margin-top: 80px;
+}
+
+.sub-recomend-title {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.show-right-content {
+  float: right;
+  width: 340px;
+}
+
+.side-profile {
+  background-color: $white;
+  padding: 40px 20px;
+  text-align: center;
+  &__image {
+    border-radius: 50%;
+    height: 105px;
+    width: 105px;
+  }
+  &__title {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  &__body {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    text-align: left;
+  }
+}
+
+.side-job-detail {
+  background-color: $white;
+  margin-top: 20px;
+}
+
+.job-detail-inner {
+  border-bottom: 1px solid $snow_gray;
+  padding: 20px;
+  @include clearfix();
+}
+
+.job-detail-image {
+  float: left;
+  &--arrange {
+    margin: 4px 8px 0 0;
+  }
+}
+
+.job-detail-text {
+  float: left;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.job-detail-tag {
+  margin: 3px 0 0 35px;
+  &__list {
+    display: inline;
+    font-size: 0.7rem;
+    margin: 0 15px 15px 0;
+  }
+}
+
+.tag-list-btn {
+  color: $dark_gray;
+  display: inline-block;
+  padding-left: 20px;
+  position: relative;
+  text-decoration: none;
+  &:after {
+    background: url(https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-02.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    height: 14px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 14px;
+  }
+}
+
+.side-job-like {
+  padding: 20px;
+  &__btn {
+    font-weight: normal;
+    margin: 0 auto;
+    width: 100%;
+    &:before {
+      margin-left: 40px;
+    }
+  }
+}
+
+.side-job-application {
+  background-color: $bright_gray;
+  padding: 20px;
+  &__btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.right {
+  width: $right-width;
+  float: right;
+}
+
+.triplab {
+  list-style: none;
+  float: right;
+  &__list {
+    float: left;
+    width: 165px;
+    background-color: $white;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    &--current {
+      background-color: $blue;
+      font-weight: bold;
+    }
+    &:nth-child(even) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.triplab-btn {
+  padding: 25px 10px;
+  text-decoration: none;
+  display: block;
+  &__hover-type {
+    color: $black;
+    &:hover {
+      color: $white;
+      background-color: $blue;
+      border-radius: 5px;
+    }
+  }
+  &--current {
+    color: $white;
+    background-color: $blue;
+    border-radius: 5px;
+  }
+  &__num {
+    display: block;
+  }
+}
