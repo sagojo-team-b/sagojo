@@ -1,0 +1,38 @@
+.profile-wrapper {
+  margin: 0 auto;
+  width: $base-width;
+  @include clearfix();
+}
+
+.background-image {
+  height: 300px;
+  width: 100%;
+  background-color: $gray;
+  padding-top: 71px;
+}
+
+.profile-contents {
+  margin-top: 15px;
+  @include clearfix();
+}
+
+.profile-contents__left {
+  float: left;
+  width: $left-width;
+}
+
+.profile-detail {
+  background-color: $white;
+  overflow: hidden;
+  padding: 30px 20px;
+  position: relative;
+  h2 {
+    text-align: center;
+    margin: 100px auto 50px auto;
+    font-weight: bold;
+  }
+}
+
+.form_cover {
+  padding: 50px 50px 35px 50px;
+}
