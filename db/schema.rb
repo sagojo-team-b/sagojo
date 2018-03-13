@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180311073719) do
+ActiveRecord::Schema.define(version: 20180313075415) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -39,6 +39,43 @@ ActiveRecord::Schema.define(version: 20180311073719) do
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_likes_on_article_id", using: :btree
     t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
+  end
+
+  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",                         null: false
+    t.string   "avatar"
+    t.string   "background_image"
+    t.string   "catch_phrase"
+    t.integer  "sex"
+    t.integer  "tel"
+    t.integer  "post_number"
+    t.string   "address"
+    t.string   "present_place"
+    t.string   "private_link"
+    t.integer  "pv"
+    t.string   "sns"
+    t.integer  "follower"
+    t.integer  "job_type_tags_1"
+    t.integer  "job_type_tags_2"
+    t.integer  "job_type_tags_3"
+    t.integer  "job_type_tags_4"
+    t.text     "job_type_else",     limit: 65535
+    t.text     "language",          limit: 65535
+    t.text     "job_history",       limit: 65535
+    t.text     "travel_history",    limit: 65535
+    t.integer  "skill_tags_1"
+    t.integer  "skill_tags_2"
+    t.integer  "skill_tags_3"
+    t.integer  "skill_tags_4"
+    t.text     "skill_tags_else",   limit: 65535
+    t.text     "achivement",        limit: 65535
+    t.string   "income"
+    t.string   "travel_date"
+    t.text     "travel_content",    limit: 65535
+    t.text     "self_introduction", limit: 65535
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
   end
 
   create_table "triplab_articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
