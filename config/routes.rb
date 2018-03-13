@@ -19,12 +19,14 @@ Rails.application.routes.draw do
   get 'users/privacy_policy', to: 'users#privacy_policy'
   get 'users/terms_of_service', to: 'users#terms_of_service'
 
+# プロフィール用とお気に入り一覧
+  resources :user, only: [:edit, :update] do
+    resource :like, only: [:show]
+  end
+
 # like機能用
   post '/likes/:article_id', to: 'likes#like', as: 'like'
   delete '/likes/:article_id', to: 'likes#unlike', as: 'unlike'
-  resources :user do
-    resource :like, only: [:show]
-  end
 
 # index
   root 'articles#index'
