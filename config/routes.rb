@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'users/terms_of_service', to: 'users#terms_of_service'
 
 # プロフィール用とお気に入り一覧
-  resources :user, only: [:edit, :update] do
+  resources :users, only: [:edit, :update] do
     resource :like, only: [:show]
   end
 
