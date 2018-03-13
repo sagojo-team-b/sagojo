@@ -15,7 +15,5 @@ class LikesController < ApplicationController
 
   def set_variables
     @article = Article.find(params[:article_id])
-    @id_name = "#like-link-#{@article.id}"
-    @id_star = "#star-#{@article.id}"
   end
 end
