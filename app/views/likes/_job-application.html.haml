@@ -1,0 +1,17 @@
+.job-application
+  %p.limit_day
+    募集終了まであと
+    %span 2
+    / 応募までの残り日数変数設置
+    日
+  .job-application__btn
+    = link_to "応募画面へ進む", root_path, class: "account-box__field__action job-application__btn__send"
+  %p.posted-people
+    現在
+    %span ４６
+    / 応募人数変数設置
+    人が応募中です
+  %p.likes-people
+    現在
+    %span= article.likes.length
+    人がお気に入り登録済み
