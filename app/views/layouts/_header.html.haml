@@ -33,7 +33,7 @@
             %li
               = link_to 'お気に入り一覧',  user_like_path(current_user.id), class: 'menu'
             %li
-              = link_to 'プロフィール編集', root_path, class: 'menu'
+              = link_to 'プロフィール編集', edit_user_path(current_user.id), class: 'menu'
             %li
               = link_to 'アカウント設定', edit_user_registration_path, class: 'menu'
             %li.last-list

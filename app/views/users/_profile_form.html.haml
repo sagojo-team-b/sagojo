@@ -1,0 +1,106 @@
+.profile-detail
+  = form_for @profile, url: {action: 'update'}, class: 'form_cover' do |f|
+    %h2
+      = current_user.name
+    .account-box__field.edit__field
+      = f.label :あなたのキャッチフレーズ
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :生年月日
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :性別
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'電話番号(半角)'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'郵便番号(半角)'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :都道府県
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :市町村
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :番地
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'ビル・マンション等'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'現在地(現在旅行中の方のみご記入ください)'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'関連リンク(webサイトやブログなど)'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'SNSアカウント(プロフィールページのリンクを入力してください)'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'職種(タグ)'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :職種
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :語学力
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'就業経験・学歴など'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :旅の経験
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'あなたのスキル・得意なこと(タグ)'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'あなたのスキル・得意なこと'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :'過去のご実績・ご活動'
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :旅行時に臨む収入
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :準備期間
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :今後の旅の予定
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :どんた旅がしたいか
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.label :自己紹介文
+      %br/
+      = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form", id: "password"
+    .account-box__field.edit__field
+      = f.submit "更新する", class: "account-box__field account-box__field__action-edit", redirect_to: root_path
