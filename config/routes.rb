@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   get 'users/privacy_policy', to: 'users#privacy_policy'
   get 'users/terms_of_service', to: 'users#terms_of_service'
 
+# like機能用
+  post '/likes/:article_id', to: 'likes#like', as: 'like'
+  delete '/likes/:article_id', to: 'likes#unlike', as: 'unlike'
+
 # index
   root 'articles#index'
   get 'home',          to: 'header#home'

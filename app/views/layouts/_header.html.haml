@@ -23,7 +23,8 @@
         .header-utility-02__item.circle-comment
           .header-utility-02__.fa.fa-comment
         .header-utility-02__item.profile-image
-        .header-utility-02__string.profile-name テスト太郎
+        .header-utility-02__string.profile-name
+          = current_user.name
         .header-utility-02.fa.fa-caret-down.user_menu_btn
         %ul.header-utility-02__list
           %li
