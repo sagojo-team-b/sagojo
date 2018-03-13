@@ -1,0 +1,14 @@
+= render 'layouts/header'
+= render 'likes/like_header'
+.work-main-content.like-cover
+  .main-left-content
+    = render partial: 'layouts/main-left-content', collection: @articles, as: :article
+    / # = paginate(@articles)
+  .right
+    = render partial: 'likes/job-application', collection: @articles, as: :article
+= render 'layouts/sub-nav-4lists'
+= render 'layouts/sub-nav-2lists'
+.footer
+  .footer-inner
+    = render 'layouts/footer'
+    = render 'layouts/footer-copyright'

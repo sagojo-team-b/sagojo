@@ -22,6 +22,9 @@ Rails.application.routes.draw do
 # like機能用
   post '/likes/:article_id', to: 'likes#like', as: 'like'
   delete '/likes/:article_id', to: 'likes#unlike', as: 'unlike'
+  resources :user do
+    resource :like, only: [:show]
+  end
 
 # index
   root 'articles#index'
