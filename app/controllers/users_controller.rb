@@ -6,4 +6,10 @@ class UsersController < ApplicationController
   def privacy_policy
   end
 
+  def edit
+  end
+
+  def update
+  end
+
 end
