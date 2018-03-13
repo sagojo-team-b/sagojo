@@ -20,13 +20,14 @@ Rails.application.routes.draw do
   get 'users/terms_of_service', to: 'users#terms_of_service'
 
 # like機能用
-  post '/like/:article_id', to: 'likes#like', as: 'like'
-  delete '/like/:article_id', to: 'likes#unlike', as: 'unlike'
+  post '/likes/:article_id', to: 'likes#like', as: 'like'
+  delete '/likes/:article_id', to: 'likes#unlike', as: 'unlike'
 
 # index
   root 'articles#index'
   get 'home',          to: 'header#home'
   get 'home/job',      to: 'header#job'
+  get 'home/job/:id',  to: 'header#show', as: 'home_job_detail'
   get 'home/triplab',  to: 'header#triplab'
   get 'home/newcomer', to: 'header#newcomer'
   get 'home/company',  to: 'header#company'
