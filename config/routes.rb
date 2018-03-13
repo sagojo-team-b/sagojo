@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   }
   devise_scope :user do
     get 'users/registrations/show', to: 'users/registrations#show'
+    get 'usres/registrations/change_password', to: 'users/registrations#change_password'
   end
 
 # メール登録確認用

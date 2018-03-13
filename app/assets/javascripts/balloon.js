@@ -105,4 +105,30 @@ $(document).on('turbolinks:load', function() {
       });
     }
   });
+  //新しいpasswordフォームの要素を取得して、空ならバルーン表示
+  $('#new_password').focusout(function(e) {
+    if(!$('#new_password').val().match(/\S/g)){
+      $('#new_password').showBalloon({
+        position: "left",
+        contents: "<p>*必須項目です<br>*6文字以上にしてください</p>",
+        css: {
+          backgroundColor: "red",
+          opacity: "0.6",
+          color: "white",
+          fontSize: "18px"
+        }
+      });
+    } else {
+      $('#new_password').hideBalloon({
+        position: "left",
+        contents: "<p>*必須項目です<br>*6文字以上にしてください</p>",
+        css: {
+          backgroundColor: "red",
+          opacity: "0.6",
+          color: "white",
+          fontSize: "18px"
+        }
+      });
+    }
+  });
 });
