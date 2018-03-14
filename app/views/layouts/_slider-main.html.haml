@@ -5,7 +5,12 @@
         = image_tag (slider_article.image_url), class: "slider_main_content__image"
         .count
           %img.count__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/slider/img_hukidashi.svg" }
-          %p.count__p あと4日
+          %p.count__p
+            あと
+            %p.count__p__num
+              43
+              %span.count__p__day
+                日
         .slider_link
           %p.slider_link__company
             = slider_article.company

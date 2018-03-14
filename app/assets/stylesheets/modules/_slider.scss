@@ -28,6 +28,7 @@
     width: 28px;
   }
 }
+
 .right_slider_button {
   width: 70px;
   height: 560px;
@@ -83,7 +84,7 @@
     font-size: 13px;
     letter-spacing: 2px;
     line-height: 25px;
-    color: white;
+    color: $white;
     font-weight: bold;
     display: inline-block;
     position: absolute;
@@ -91,9 +92,19 @@
     right: 20px;
     width: 63px;
     height: 55px;
+    &__num {
+      color: $white;
+      font-size: 30px;
+      position: absolute;
+      top: 40px;
+      right: 10px;
     }
-
- }
+    &__day {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}
 
 .slider_link {
   width: 100%;
