@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180311073719) do
+ActiveRecord::Schema.define(version: 20180313091619) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -30,6 +30,11 @@ ActiveRecord::Schema.define(version: 20180311073719) do
     t.text     "single_word",            limit: 65535
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
+    t.integer  "job_tag_id"
+  end
+
+  create_table "job_tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "job_tag_type"
   end
 
   create_table "triplab_articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
