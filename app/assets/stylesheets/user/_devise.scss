@@ -104,6 +104,7 @@ html, body {
       font-size: 15px;
       background-color: $yellow;
       color: $white;
+      border: none;
     }
     &__action-edit {
       height: 100%;
@@ -115,6 +116,19 @@ html, body {
       background-color: $light_blue;
       color: $white;
       cursor: pointer;
+      border: none;
+    }
+    &__action-profile {
+      height: 100%;
+      width: 100%;
+      margin: 20px auto;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 15px;
+      background-color: $yellow;
+      color: $white;
+      cursor: pointer;
+      border: none;
     }
   }
   .name-announce, .pass-length {
