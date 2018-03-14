@@ -1,86 +1,86 @@
 %ul.job
   %li.job__list.job__list--current
     = link_to "", class: "job-btn job-btn--current" do
-      すべて
+      =all_tags[0].job_tag_type
       %span.job-btn__num
-        (85)
+        = "(#{@all_articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      記事執筆
+      =all_tags[1].job_tag_type
       %span.job-btn__num
-        (55)
+        = "(#{@all_tags[1].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      写真撮影
+      =all_tags[2].job_tag_type
       %span.job-btn__num
-        (4)
+        = "(#{@all_tags[2].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      動画撮影
+      =all_tags[3].job_tag_type
       %span.job-btn__num
-        (1)
+        = "(#{@all_tags[3].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      コンシェルジュ
+      =all_tags[4].job_tag_type
       %span.job-btn__num
-        (0)
+        = "(#{@all_tags[4].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      情報提供
+      =all_tags[5].job_tag_type
       %span.job-btn__num
-        (8)
+        = "(#{@all_tags[5].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      調査
+      =all_tags[6].job_tag_type
       %span.job-btn__num
-        (2)
+        = "(#{@all_tags[6].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      アンバサダー
+      =all_tags[7].job_tag_type
       %span.job-btn__num
-        (3)
+        = "(#{@all_tags[7].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      モデル
+      =all_tags[8].job_tag_type
       %span.job-btn__num
-        (1)
+        = "(#{@all_tags[8].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      体験モニター
+      =all_tags[9].job_tag_type
       %span.job-btn__num
-        (3)
+        = "(#{@all_tags[9].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      その他
+      =all_tags[10].job_tag_type
       %span.job-btn__num
-        (4)
+        = "(#{@all_tags[10].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      営業代行
+      =all_tags[11].job_tag_type
       %span.job-btn__num
-        (3)
+        = "(#{@all_tags[11].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      正社員
+      =all_tags[12].job_tag_type
       %span.job-btn__num
-        (1)
+        = "(#{@all_tags[12].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      編集者
+      =all_tags[13].job_tag_type
       %span.job-btn__num
-        (0)
+        = "(#{@all_tags[13].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      ディレクター
+      =all_tags[14].job_tag_type
       %span.job-btn__num
-        (1)
+        = "(#{@all_tags[14].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      モニターツアー
+      =all_tags[15].job_tag_type
       %span.job-btn__num
-        (1)
+        = "(#{@all_tags[15].articles.count})"
   %li.job__list
     = link_to "", class: "job-btn job-btn__hover-type" do
-      バイヤー
+      =all_tags[16].job_tag_type
       %span.job-btn__num
-        (1)
+        = "(#{@all_tags[16].articles.count})"

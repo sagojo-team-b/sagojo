@@ -5,6 +5,8 @@ class HeaderController < ApplicationController
 
   def job
     @articles = Article.page(params[:page]).per(10)
+    @all_articles = Article.all
+    @all_tags = JobTag.all
   end
 
   def show

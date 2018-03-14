@@ -6,7 +6,7 @@
     = render partial: 'layouts/main-left-content', collection: @articles, as: :article
     = paginate(@articles)
   .right
-    = render 'job/right-job'
+    = render partial: 'job/right-job', locals: { all_tags: @all_tags }
     = render 'job/right-tag'
 = render 'layouts/sub-nav-4lists'
 = render 'layouts/sub-nav-2lists'
