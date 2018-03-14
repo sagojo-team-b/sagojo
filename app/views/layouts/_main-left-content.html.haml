@@ -10,7 +10,12 @@
         = article.title
       %p.job-thumnail__content--thum-job-desc
         = article.introduction
-      %p.job-thumnail__content--thum-job-utility 募集終了まで 7 日 | 335 view
+      %p.job-thumnail__content--thum-job-utility
+        募集終了まで
+        %span.job-thumnail__content--thum-job-utility.remaining-days
+          = create_time(article.application_deadline)
+        %span.job-thumnail__content--thum-job-utility
+          日 | 335 view
       .thum-job-taglist
         %img.thum-job-taglist__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-01.svg" }
         %ul.thum-job-taglist__ul

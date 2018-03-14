@@ -7,7 +7,7 @@
     %p.job-item
       募集終了まで
       %span.job-item__days
-        5
+        = create_time(@article.application_deadline)
       %span
         日
       %span.job-item__views
