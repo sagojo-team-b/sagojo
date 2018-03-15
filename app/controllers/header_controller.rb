@@ -4,7 +4,7 @@ class HeaderController < ApplicationController
   end
 
   def job
-    if (params[:keyword] == "latest")
+    if params[:keyword] == "latest"
       @job_num = Article.all
       @articles = Article.order("created_at DESC").page(params[:page]).per(10)
     else
