@@ -1,0 +1,15 @@
+= render 'layouts/header'
+.background-image
+.profile-wrapper
+  .profile-contents
+    .profile-contents__left
+      .prrofile-contents__left__inner
+        = render 'users/profile_show'
+    .show-right-content
+      = render 'job/show-side-profile', locals: @profile
+      = render 'job/show-side-job-detail'
+= render 'layouts/sub-nav-2lists'
+.footer
+  .footer-inner
+    = render 'layouts/footer'
+    = render 'layouts/footer-copyright'

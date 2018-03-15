@@ -72,3 +72,24 @@
     }
   }
 }
+
+// profile_show
+.edit_path {
+  float: right;
+}
+
+.user-catch-phrase {
+  background-color: $light_gray;
+  margin: 0 auto;
+}
+
+.profile-user-list {
+  margin-top:30px;
+  &__cover {
+    margin-top: 25px;
+    &__column {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+}

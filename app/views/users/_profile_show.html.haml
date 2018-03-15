@@ -1,0 +1,134 @@
+.profile-detail
+  %h2
+    = current_user.name
+  .edit_path
+    = fa_icon('edit')
+    =link_to 'プロフィールを編集', edit_user_path
+  %p.user-catch_phrase
+    = @profile.catch_phrase
+  %ul.profile-user-list
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        生年月日
+        %p
+          = @profile.birth_date_y
+          年
+          = @profile.birth_date_m
+          月
+          = @profile.birth_date_d
+          日
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        性別
+        %p
+          = @profile.sex
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        電話番号
+        %p
+          = @profile.tel
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        郵便番号
+        %p
+          = @profile.post_number
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        都道府県
+        %p
+          = @profile.address1
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        市町村
+        %p
+          = @profile.address2
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        番地
+        %p
+          = @profile.address3
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        ビル・マンション名等
+        %p
+          = @profile.address4
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        現在地（現在旅行中の方のみご記入ください）
+        %p
+          = @present_plase
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        関連リンク（Webサイトやブログなど）
+        %p
+          = @profile.private_link
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        SNSアカウント
+        %p
+          = @profile.sns
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        職種（タグ）
+        %p
+          = @profile.job_type_tags_1
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        職種
+        %p
+          = @profile.job_type_else
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        語学力
+        %p
+          = @profile.language
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        就業経験・学歴など
+        %p
+          = @profile.job_history
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        旅の経験
+        %p
+          = @profile.travel_history
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        あなたのスキル・得意なこと（タグ）
+        %p
+          = @profile.skill_tags_1
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        あなたのスキル・得意なこと
+        %p
+          = @profile.skill_tags_else
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        過去のご実績・ご活動
+        %p
+          = @profile.achivement
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        旅行時に臨む収入
+        %p
+          = @profile.income
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        準備期間
+        %p
+          = @profile.preparation
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        今後の旅の予定
+        %p
+          = @profile.travel_date
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        どんな旅がしたいか
+        %p
+          = @profile.travel_content
+    %li.profile-user-list__cover
+      %p.profile-user-list__cover__column
+        自己紹介文
+        %p
+          = @profile.self_introduction
