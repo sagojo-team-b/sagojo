@@ -46,10 +46,16 @@ ActiveRecord::Schema.define(version: 20180313075415) do
     t.string   "avatar"
     t.string   "background_image"
     t.string   "catch_phrase"
+    t.integer  "birth_date_y"
+    t.integer  "birth_date_m"
+    t.integer  "birth_date_d"
     t.integer  "sex"
     t.integer  "tel"
     t.integer  "post_number"
-    t.string   "address"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address3"
+    t.string   "address4"
     t.string   "present_place"
     t.string   "private_link"
     t.integer  "pv"
@@ -70,6 +76,7 @@ ActiveRecord::Schema.define(version: 20180313075415) do
     t.text     "skill_tags_else",   limit: 65535
     t.text     "achivement",        limit: 65535
     t.string   "income"
+    t.text     "preparation",       limit: 65535
     t.string   "travel_date"
     t.text     "travel_content",    limit: 65535
     t.text     "self_introduction", limit: 65535

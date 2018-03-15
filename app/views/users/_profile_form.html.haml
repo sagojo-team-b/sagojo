@@ -6,10 +6,16 @@
       = f.label :あなたのキャッチフレーズ
       %br/
       = f.text_field :catch_phrase, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "catch_phrase", placeholder: '例：人生に「旅をする」という選択肢を'
-    / .account-box__field.edit__field
-    /   = f.label :生年月日
-    /   %br/
-    /   = f.number_field :birth_date, autocomplete: "off", class: "account-box__field__form edit_form", id: "birth_date"
+    .account-box__field.edit__field
+      = f.label :'生年月日（年）'
+      %br/
+      = f.number_field :birth_date_y, autocomplete: "off", class: "account-box__field__form edit_form", id: "birth_date_y"
+    .account-box__field.edit__field
+      = f.label :'生年月日（月）'
+      = f.number_field :birth_date_m, autocomplete: "off", class: "account-box__field__form edit_form", id: "birth_date_m"
+    .account-box__field.edit__field
+      = f.label :'生年月日(日)'
+      = f.number_field :birth_date_d, autocomplete: "off", class: "account-box__field__form edit_form", id: "birth_date_d"
     .account-box__field.edit__field
       = f.label :性別
       %br/
@@ -22,22 +28,22 @@
       = f.label :'郵便番号(半角)'
       %br/
       = f.number_field :post_number, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "post_number", placeholder: '例：123456（ハイフンなし）'
-    / .account-box__field.edit__field
-    /   = f.label :都道府県
-    /   %br/
-    /   = f.text_field :address1, autocomplete: "off", class: "account-box__field__form edit_form", id: "address"
-    / .account-box__field.edit__field
-    /   = f.label :市町村
-    /   %br/
-    /   = f.text_field :address2, autocomplete: "off", class: "account-box__field__form edit_form", id: "address2"
-    / .account-box__field.edit__field
-    /   = f.label :番地
-    /   %br/
-    /   = f.text_field :address3, autocomplete: "off", class: "account-box__field__form edit_form", id: "address3"
-    / .account-box__field.edit__field
-    /   = f.label :'ビル・マンション等'
-    /   %br/
-    /   = f.text_field :address4, autocomplete: "off", class: "account-box__field__form edit_form", id: "address4"
+    .account-box__field.edit__field
+      = f.label :都道府県
+      %br/
+      = f.text_field :address1, autocomplete: "off", class: "account-box__field__form edit_form", id: "address1"
+    .account-box__field.edit__field
+      = f.label :市町村
+      %br/
+      = f.text_field :address2, autocomplete: "off", class: "account-box__field__form edit_form", id: "address2"
+    .account-box__field.edit__field
+      = f.label :番地
+      %br/
+      = f.text_field :address3, autocomplete: "off", class: "account-box__field__form edit_form", id: "address3"
+    .account-box__field.edit__field
+      = f.label :'ビル・マンション等'
+      %br/
+      = f.text_field :address4, autocomplete: "off", class: "account-box__field__form edit_form", id: "address4"
     .account-box__field.edit__field
       = f.label :'現在地(現在旅行中の方のみご記入ください)'
       %br/
@@ -69,7 +75,7 @@
     .account-box__field.edit__field.text-area-cover
       = f.label :旅の経験
       %br/
-      = f.password_field :travel_history, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "travel_history", placeholder: '例：&#13;&#10;【国内】&#13;&#10;自転車移動、テント泊で北海道を旅しました。&#13;&#10;【海外】&#13;&#10;インド（3週間）、ヨルダン・イスラエル（2週間）、フランス（4日間）の5ヶ国を旅しました。'
+      = f.text_area :travel_history, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "travel_history", placeholder: '例：&#13;&#10;【国内】&#13;&#10;自転車移動、テント泊で北海道を旅しました。&#13;&#10;【海外】&#13;&#10;インド（3週間）、ヨルダン・イスラエル（2週間）、フランス（4日間）の5ヶ国を旅しました。'
     .account-box__field.edit__field
       = f.label :'あなたのスキル・得意なこと(タグ)'
       %br/
@@ -98,10 +104,10 @@
       = f.label :旅行時に臨む収入
       %br/
       = f.text_field :income, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "income", placeholder: '例：移動費+月収10万円'
-    / .account-box__field.edit__field.text-area-cover
-    /   = f.label :準備期間
-    /   %br/
-    /   = f.password_field :current_password, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "password", placeholder: '例：基本的にご連絡いただいてから1ヶ月以内に出発可能です。'
+    .account-box__field.edit__field.text-area-cover
+      = f.label :準備期間
+      %br/
+      = f.text_area :preparation, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "preparation", placeholder: '例：基本的にご連絡いただいてから1ヶ月以内に出発可能です。'
     .account-box__field.edit__field
       = f.label :今後の旅の予定
       %br/

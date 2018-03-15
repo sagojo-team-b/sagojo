@@ -5,10 +5,16 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
       t.string        :avatar
       t.string        :background_image
       t.string        :catch_phrase
+      t.integer       :birth_date_y
+      t.integer       :birth_date_m
+      t.integer       :birth_date_d
       t.integer       :sex
       t.integer       :tel
       t.integer       :post_number
-      t.string        :address
+      t.string        :address1
+      t.string        :address2
+      t.string        :address3
+      t.string        :address4
       t.string        :present_place
       t.string        :private_link
       t.integer       :pv
@@ -29,6 +35,7 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
       t.text          :skill_tags_else
       t.text          :achivement
       t.string        :income
+      t.text          :preparation
       t.string        :travel_date
       t.text          :travel_content
       t.text          :self_introduction
