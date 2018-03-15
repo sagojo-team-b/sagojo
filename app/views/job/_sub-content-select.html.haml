@@ -3,7 +3,7 @@
     .sub-content-sort
       .sub-content-form
         .sub-content-select
-          %select.sub-content-select-box
+          %select.sub-content-select-box#select_box
             %option{ value: "job" }おすすめ順
             %option{ value: "latest" }新着順
             %option{ value: "popular" }人気順
@@ -12,5 +12,5 @@
       %p.sub-content-text
         シゴト数
         %span.sub-content-num
-          = @all_articles.length
+          = @job_num.length
         件

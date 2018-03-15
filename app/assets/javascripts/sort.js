@@ -1,7 +1,12 @@
 $(document).ready(function() {
-  $('.sub-content-select-box').change(function(e) {
+  $('#select_box').change(function(e) {
     e.preventDefault();
     var value = $(this).val();
-    console.log(value)
+    $.ajax({
+      url: '/',
+      type: 'GET',
+      data: { keyword: value },
+      dataType: 'json'
+    })
   })
 })

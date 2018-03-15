@@ -4,8 +4,17 @@ class HeaderController < ApplicationController
   end
 
   def job
-    @all_articles = Article.all
-    @articles = Article.page(params[:page]).per(10)
+    if (params[:keyword] == "latest")
+      @job_num = Article.all
+      @articles = Article.order("created_at DESC").page(params[:page]).per(10)
+    else
+      @job_num = Article.all
+      @articles = Article.page(params[:page]).per(10)
+    end
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def show
