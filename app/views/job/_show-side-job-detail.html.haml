@@ -1,3 +1,4 @@
+/ 位置固定する
 .side-job-detail
   .job-detail-inner.side-job-type
     = image_tag "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-category.svg", class: "job-detail-image job-detail-image--arrange"
@@ -31,6 +32,7 @@
           日本全国
   .side-job-like
     = link_to "お気に入りに追加", "", class: "application-like__upper side-job-like__btn"
+    / 応募期間過ぎてれば表示しない
   .side-job-application
     = link_to "応募画面へ進む", "#", class: "application-apply__upper side-job-application__btn"
     %p.application-btn-item.application-apply__lower
