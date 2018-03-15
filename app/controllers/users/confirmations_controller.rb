@@ -15,6 +15,10 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
     self.resource = resource_class.confirm_by_token(params[:confirmation_token])
     yield resource if block_given?
 
+    # メールトークンを受け取り後、プロフィールテンプレートを自動生成
+    @user = User.find_by(confirmation_token: params[:confirmation_token])
+    Profile.create(user_id: @user.id)
+
     # if resource.errors.empty?
     #   # set_flash_message!(:notice, :confirmed)
     #   # respond_with_navigational(resource){ redirect_to after_confirmation_path_for(resource_name, resource) }
