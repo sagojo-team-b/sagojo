@@ -75,6 +75,9 @@
     float: left;
     color: $light_gray;
     position: relative;
+    img {
+      border-radius: 50%;
+    }
   }
   &__string {
     font-size: 13px;
@@ -101,8 +104,6 @@
   top: 25%;
   left: 25%;
 }
-
-
 
 .header-utility-01 {
   height: 100%;
