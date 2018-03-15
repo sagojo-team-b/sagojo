@@ -1,13 +1,26 @@
 = render 'layouts/header'
-.background-image
-.profile-wrapper
-  .profile-contents
-    .profile-contents__left
-      .prrofile-contents__left__inner
-        = render 'users/profile_form'
-    .show-right-content
-      = render 'job/show-side-profile'
-      = render 'job/show-side-job-detail'
+= form_for @profile, url: {action: 'update'} do |f|
+  .background
+    = f.file_field :background_image, class: 'background__image'
+    =f.label :background_image do
+      %i.fa.fa-image
+    %p.background-image-label
+      背景画像を追加する
+  .profile-wrapper
+    .profile-contents
+      .profile-contents__left
+        - if @profile.avatar.blank?
+          = image_tag 'icon-tabibito-01.svg', class: "avatar-image"
+        - else
+          = @profile.avatar
+        = f.file_field :avatar, class: 'avatar'
+        = f.label :avatar do
+          = image_tag 'icon-prof-camera.svg', class: 'avatar-icon'
+        .prrofile-contents__left__inner
+          = render 'users/profile_form'
+      .show-right-content
+        = render 'job/show-side-profile'
+        = render 'job/show-side-job-detail'
 = render 'layouts/sub-nav-2lists'
 .footer
   .footer-inner

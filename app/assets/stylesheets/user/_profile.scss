@@ -4,11 +4,28 @@
   @include clearfix();
 }
 
-.background-image {
+.background {
   height: 300px;
   width: 100%;
   background-color: $gray;
   padding-top: 71px;
+  &__image {
+    display: none;
+  }
+  .fa-image {
+    font-size: 100px;
+    opacity: 60px;
+    position: absolute;
+    top: 150px;
+    left: 46%;
+    color: $white;
+  }
+}
+
+.background-image-label {
+  text-align: center;
+  margin-top: 180px;
+  color: $white;
 }
 
 .profile-contents {
@@ -20,6 +37,27 @@
   float: left;
   width: $left-width;
   margin-bottom: 50px;
+  .avatar {
+    display: none;
+  }
+  .avatar-icon {
+    position: absolute;
+    z-index: 5;
+    left: 470px;
+    top: 420px;
+  }
+}
+
+.avatar-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: solid 4px $yellow;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 4;
+  left: 350px;
+  top: 300px;
 }
 
 .profile-detail {
