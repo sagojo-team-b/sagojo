@@ -1,15 +1,16 @@
 = render 'layouts/header'
 .background-image
+  - if @profile.background_image.blank?
+    %i.fa.fa-image
+  - else
+    = image_tag @profile.background_image.url
 .profile-wrapper
   .profile-contents
     .profile-contents__left
       - if @profile.avatar.blank?
-            = image_tag 'icon-tabibito-01.svg', class: "avatar-image"
-          - else
-            = @profile.avatar
-          = f.file_field :avatar, class: 'avatar'
-          = f.label :avatar do
-            = image_tag 'icon-prof-camera.svg', class: 'avatar-icon'
+        = image_tag 'icon-tabibito-01.svg', class: "avatar-image"
+      - else
+        = image_tag @profile.avatar.url, class: "avatar-image"
       .prrofile-contents__left__inner
         = render 'users/profile_show'
     .show-right-content
