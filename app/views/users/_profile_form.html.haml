@@ -5,7 +5,7 @@
     .account-box__field.edit__field
       = f.label :あなたのキャッチフレーズ
       %br/
-      = f.text_field :catch_phrase, autocomplete: "off", class: "account-box__field__form edit_form", id: "catch_phrase", placeholder: '例：人生に「旅をする」という選択肢を'
+      = f.text_field :catch_phrase, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "catch_phrase", placeholder: '例：人生に「旅をする」という選択肢を'
     / .account-box__field.edit__field
     /   = f.label :生年月日
     /   %br/
@@ -13,15 +13,15 @@
     .account-box__field.edit__field
       = f.label :性別
       %br/
-      = f.number_field :sex, autocomplete: "off", class: "account-box__field__form edit_form", id: "sex"
+      = f.number_field :sex, autocomplete: "off", class: "account-box__field__form edit_form ", id: "sex"
     .account-box__field.edit__field
       = f.label :'電話番号(半角)'
       %br/
-      = f.number_field :tel, autocomplete: "off", class: "account-box__field__form edit_form", id: "tel", placeholder: '例：012334567890(ハイフンなし)'
+      = f.number_field :tel, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "tel", placeholder: '例：012334567890(ハイフンなし)'
     .account-box__field.edit__field
       = f.label :'郵便番号(半角)'
       %br/
-      = f.number_field :post_number, autocomplete: "off", class: "account-box__field__form edit_form", id: "post_number", placeholder: '例：123456（ハイフンなし）'
+      = f.number_field :post_number, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "post_number", placeholder: '例：123456（ハイフンなし）'
     / .account-box__field.edit__field
     /   = f.label :都道府県
     /   %br/
@@ -45,11 +45,11 @@
     .account-box__field.edit__field
       = f.label :'関連リンク(webサイトやブログなど)'
       %br/
-      = f.text_field :private_link, autocomplete: "off", class: "account-box__field__form edit_form", id: "private_link", placeholder: '例：個人ブログ、ポートフォリオサイトなど'
+      = f.text_field :private_link, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "private_link", placeholder: '例：個人ブログ、ポートフォリオサイトなど'
     .account-box__field.edit__field
       = f.label :'SNSアカウント(プロフィールページのリンクを入力してください)'
       %br/
-      = f.text_field :sns, autocomplete: "off", class: "account-box__field__form edit_form", id: "sns", placeholder: '例：https://witter.com/sagojo_travel'
+      = f.text_field :sns, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "sns", placeholder: '例：https://witter.com/sagojo_travel'
     .account-box__field.edit__field
       = f.label :'職種(タグ)'
       %br/
@@ -57,19 +57,19 @@
     .account-box__field.edit__field
       = f.label :職種
       %br/
-      = f.text_field :job_type_else, autocomplete: "off", class: "account-box__field__form edit_form", id: "job_type_else", placeholder: 'タグで入力しづらい項目を自由記述でご入力ください'
+      = f.text_field :job_type_else, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "job_type_else", placeholder: 'タグで入力しづらい項目を自由記述でご入力ください'
     .account-box__field.edit__field.text-area-cover
       = f.label :語学力
       %br/
-      = f.text_area :language, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "language", placeholder: '例：&#13;&#10;英語：TOEIC800点、オーストラリアに留学経験あり、&#13;&#10;ビジネスレベル 中国語：中国に留学経験あり、日常会話レベル'
+      = f.text_area :language, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "language", placeholder: '例：&#13;&#10;英語：TOEIC800点、オーストラリアに留学経験あり、&#13;&#10;ビジネスレベル 中国語：中国に留学経験あり、日常会話レベル'
     .account-box__field.edit__field.text-area-cover
       = f.label :'就業経験・学歴など'
       %br/
-      = f.text_area :job_history, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "job_history", placeholder: '例：&#13;&#10;2010年3月：天竺大学卒業 2011年4月～2013年11月：株式会社流沙河出版にて旅行雑誌の編集業務に携わる。&#13;&#10;2013年12月～現在：独立しフリーランスのライター、編集者として活動。&#13;&#10;写真や動画撮影の仕事をうけることもあります。'
+      = f.text_area :job_history, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "job_history", placeholder: '例：&#13;&#10;2010年3月：天竺大学卒業 2011年4月～2013年11月：株式会社流沙河出版にて旅行雑誌の編集業務に携わる。&#13;&#10;2013年12月～現在：独立しフリーランスのライター、編集者として活動。&#13;&#10;写真や動画撮影の仕事をうけることもあります。'
     .account-box__field.edit__field.text-area-cover
       = f.label :旅の経験
       %br/
-      = f.password_field :travel_history, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "travel_history", placeholder: '例：&#13;&#10;【国内】&#13;&#10;自転車移動、テント泊で北海道を旅しました。&#13;&#10;【海外】&#13;&#10;インド（3週間）、ヨルダン・イスラエル（2週間）、フランス（4日間）の5ヶ国を旅しました。'
+      = f.password_field :travel_history, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "travel_history", placeholder: '例：&#13;&#10;【国内】&#13;&#10;自転車移動、テント泊で北海道を旅しました。&#13;&#10;【海外】&#13;&#10;インド（3週間）、ヨルダン・イスラエル（2週間）、フランス（4日間）の5ヶ国を旅しました。'
     .account-box__field.edit__field
       = f.label :'あなたのスキル・得意なこと(タグ)'
       %br/
@@ -89,15 +89,15 @@
     .account-box__field.edit__field.text-area-cover
       = f.label :'あなたのスキル・得意なこと'
       %br/
-      = f.text_area :skill_tags_else, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "skill_tags_else", placeholder: 'タグで入力しづらい項目を自由記述でご入力ください'
+      = f.text_area :skill_tags_else, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "skill_tags_else", placeholder: 'タグで入力しづらい項目を自由記述でご入力ください'
     .account-box__field.edit__field.text-area-cover
       = f.label :'過去のご実績・ご活動'
       %br/
-      = f.text_area :achivement, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "achivement", placeholder: '携わった作品・プロジェクトなどできるだけ詳細に記入してください。&#13;&#10;例：&#13;&#10;過去に執筆した主な記事は以下の通りです。&#13;&#10;http://www.sagojo.link/sample1&#13;&#10;http://www.sagojo.link/sample2&#13;&#10;http://www.sagojo.link/sample3&#13;&#10;下記の動画の撮影、編集も担当しました。&#13;&#10;http://www.sagojo.link/sample4&#13;&#10;http://www.sagojo.link/sample5'
+      = f.text_area :achivement, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "achivement", placeholder: '携わった作品・プロジェクトなどできるだけ詳細に記入してください。&#13;&#10;例：&#13;&#10;過去に執筆した主な記事は以下の通りです。&#13;&#10;http://www.sagojo.link/sample1&#13;&#10;http://www.sagojo.link/sample2&#13;&#10;http://www.sagojo.link/sample3&#13;&#10;下記の動画の撮影、編集も担当しました。&#13;&#10;http://www.sagojo.link/sample4&#13;&#10;http://www.sagojo.link/sample5'
     .account-box__field.edit__field
       = f.label :旅行時に臨む収入
       %br/
-      = f.text_field :income, autocomplete: "off", class: "account-box__field__form %%edit_form", id: "income", placeholder: '例：移動費+月収10万円'
+      = f.text_field :income, autocomplete: "off", class: "account-box__field__form edit_form holder-left", id: "income", placeholder: '例：移動費+月収10万円'
     / .account-box__field.edit__field.text-area-cover
     /   = f.label :準備期間
     /   %br/
@@ -107,13 +107,13 @@
       %br/
       = f.text_field :travel_date, autocomplete: "off", class: "account-box__field__form edit_form", id: "travel_date"
     .account-box__field.edit__field.text-area-cover
-      = f.label :どんた旅がしたいか
+      = f.label :どんな旅がしたいか
       %br/
-      = f.text_area :travel_content, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "travel_content", placeholder: '例：&#13;&#10;観光地をただ回るだけでなく、現地の方の自宅に泊めてもらったりヒッチハイクをしたりしながら、&#13;&#10;人とコミュニケーションをとる旅がしたいです。'
+      = f.text_area :travel_content, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "travel_content", placeholder: '例：&#13;&#10;観光地をただ回るだけでなく、現地の方の自宅に泊めてもらったりヒッチハイクをしたりしながら、&#13;&#10;人とコミュニケーションをとる旅がしたいです。'
     .account-box__field.edit__field.text-area-cover
       = f.label :自己紹介文
       %br/
-      = f.text_area :self_introduction, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area", id: "self_introduction", placeholder: 'その他あなたに関する情報をご記入ください'
+      = f.text_area :self_introduction, autocomplete: "off", class: "account-box__field__form edit_form profile-text-area holder-left", id: "self_introduction", placeholder: 'その他あなたに関する情報をご記入ください'
     .profile-action-box
       .account-box__field.edit__field.profile-action-box__btn
         = f.submit "更新する", class: "account-box__field account-box__field__action-profile", redirect_to: root_path

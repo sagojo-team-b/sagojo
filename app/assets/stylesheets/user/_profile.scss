@@ -47,6 +47,9 @@
   padding: 15px 25px;
   border: 1px solid #ddd;
   border-radius: 25px;
+}
+
+.holder-left {
   text-align: left;
 }
 
@@ -60,7 +63,12 @@
   height: 100px;
   width: 100%;
   background-color: $light_gray;
+  width: 80%;
+  margin: 0 auto;
   &__btn {
     margin: 20px auto;
+    :hover {
+      opacity: 0.6;
+    }
   }
 }
