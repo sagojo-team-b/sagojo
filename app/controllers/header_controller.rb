@@ -1,12 +1,13 @@
 class HeaderController < ApplicationController
 
+  before_action :all_article, only: [:job, :latest, :popular, :wanted, :finished, :category]
+  before_action :all_tags, only: [:job, :latest, :popular, :wanted, :finished, :category]
+
   def home
   end
 
   def job
     @articles = Article.page(params[:page]).per(10)
-    @all_articles = Article.all
-    @all_tags = JobTag.all
   end
 
   def latest
@@ -46,9 +47,16 @@ class HeaderController < ApplicationController
   end
 
   def category
-    @all_articles = Article.all
     @selected_articles_number = JobTag.find(params[:id]).articles
     @selected_articles = JobTag.find(params[:id]).articles.order('created_at DESC').page(params[:page]).per(10)
+  end
+
+  private
+  def all_article
+    @all_articles = Article.all
+  end
+
+  def all_tags
     @all_tags = JobTag.all
   end
 
