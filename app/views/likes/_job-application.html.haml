@@ -1,8 +1,8 @@
 .job-application
   %p.limit_day
     募集終了まであと
-    %span 2
-    / 応募までの残り日数変数設置
+    %span
+      = create_time(article.application_deadline)
     日
   .job-application__btn
     = link_to "応募画面へ進む", root_path, class: "account-box__field__action job-application__btn__send"

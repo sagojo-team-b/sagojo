@@ -30,11 +30,17 @@ Rails.application.routes.draw do
 
 # index
   root 'articles#index'
-  get 'home',          to: 'header#home'
-  get 'home/job',      to: 'header#job'
-  get 'home/job/:id',  to: 'header#show', as: 'home_job_detail'
-  get 'home/triplab',  to: 'header#triplab'
-  get 'home/newcomer', to: 'header#newcomer'
-  get 'home/company',  to: 'header#company'
-  get 'home/FAQ',      to: 'header#faq'
+
+  get 'home',                    to: 'header#home'
+  get 'home/job',                to: 'header#job'
+  get 'home/latest',             to: 'header#latest'
+  get 'home/popular',            to: 'header#popular'
+  get 'home/wanted',             to: 'header#wanted'
+  get 'home/finished',           to: 'header#finished'
+  get 'home/job/:id',            to: 'header#show', as: 'home_job_detail'
+  get 'home/triplab',            to: 'header#triplab'
+  get 'home/newcomer',           to: 'header#newcomer'
+  get 'home/company',            to: 'header#company'
+  get 'home/FAQ',                to: 'header#faq'
+  get 'home/job/category/:id',   to: 'header#category', as: 'home_job_category'
 end

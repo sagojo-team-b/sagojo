@@ -1,0 +1,39 @@
+- unless create_time(article.application_deadline) > 0
+  .job-thumnail
+    = link_to home_job_detail_path(article), class: "job-thumnail-btn" do
+      = image_tag (article.thumbnail), class: "job-thumnail__image"
+      %span.job-thumnail__content
+        .job-thumnail__content--company
+          %img.job-thumnail__content--company-image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-company.svg" }
+          %span.job-thumnail__content--company-name
+            = article.company
+        %h3.job-thumnail__content--job-title
+          = article.title
+        %p.job-thumnail__content--thum-job-desc
+          = article.introduction
+        %p.job-thumnail__content--thum-job-utility
+          募集終了まで
+          %span.job-thumnail__content--thum-job-utility.remaining-days
+            = create_time(article.application_deadline)
+          %span.job-thumnail__content--thum-job-utility
+            日 | 335 view
+        .thum-job-taglist
+          %img.thum-job-taglist__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-01.svg" }
+          %ul.thum-job-taglist__ul
+            %li
+              %img.thum-job-taglist__ul--image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-02.svg" }
+              %p.thum-job-taglist__ul--li 動画
+        .thum-job-return
+          .inner-01
+            %img.inner-01__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-money.svg" }
+            %p.inner-01__p
+              = article.reward
+          .inner-02
+            - if article.other_reward?
+              %img.inner-02__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-object.svg" }
+              %p.inner-02__p 他リターンあり
+    - if user_signed_in?
+      =render 'likes/like_links', article: article
+    - else
+      = link_to new_user_session_path do
+        = image_tag 'img_star_off', class: 'btn unlike-btn', id: "star-#{article.id}"

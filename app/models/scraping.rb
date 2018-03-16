@@ -2,6 +2,7 @@ class Scraping
   def self.article_urls
     links = []
     introductions = []
+    thumbnails = []
     agent = Mechanize.new
     next_url = ""
 
@@ -15,6 +16,10 @@ class Scraping
       job_descs.each do |desc|
         introductions << desc.inner_text if current_page.search('.thum-job-01 a .content .thum-job-desc')
       end
+      job_thumbs = current_page.search('.thum-job-01 a .image img')
+      job_thumbs.each do |thum|
+        thumbnails << thum[:src] if current_page.search('.thum-job-01 a .image img')
+      end
 
       next_link = current_page.at('.pagination .next a')
       break unless next_link
@@ -23,12 +28,12 @@ class Scraping
     end
 
     links = links.select.with_index{ |link, i| i % 2 == 0 }
-    links.zip(introductions).each do |link, introduction|
-      get_article(('https://www.sagojo.link' + link), introduction)
+    links.zip(introductions, thumbnails).each do |link, introduction, thumbnail|
+      get_article(('https://www.sagojo.link' + link), introduction, thumbnail)
     end
   end
 
-  def self.get_article(link, introduction)
+  def self.get_article(link, introduction, thumbnail)
     agent = Mechanize.new
     page = agent.get(link)
 
@@ -67,7 +72,8 @@ class Scraping
       other: other,
       application_deadline: application_deadline,
       responsible_party_icon: responsible_party_icon,
-      single_word: single_word
+      single_word: single_word,
+      thumbnail: thumbnail
       )
     article.save
   end
