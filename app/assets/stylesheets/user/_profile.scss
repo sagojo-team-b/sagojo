@@ -130,6 +130,10 @@
 // profile_show
 .edit_path {
   float: right;
+  .edit-profile-path {
+    text-decoration: none;
+    color: $light_blue;
+  }
 }
 
 .user-catch-phrase {

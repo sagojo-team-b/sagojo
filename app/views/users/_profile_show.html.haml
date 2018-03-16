@@ -3,7 +3,7 @@
     = current_user.name
   .edit_path
     = fa_icon('edit')
-    =link_to 'プロフィールを編集', edit_user_path
+    =link_to 'プロフィールを編集', edit_user_path, class: 'edit-profile-path'
   %p.user-catch_phrase
     = @profile.catch_phrase
   %ul.profile-user-list

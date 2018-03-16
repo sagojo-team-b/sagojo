@@ -1,9 +1,7 @@
 = render 'layouts/header'
-.background-image
-  - if @profile.background_image.blank?
-    %i.fa.fa-image
-  - else
-    = image_tag @profile.background_image.url
+.background
+  .background__cover
+    = image_tag @profile.background_image.url, class: 'background-image-size' if @profile.background_image.present?
 .profile-wrapper
   .profile-contents
     .profile-contents__left
