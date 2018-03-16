@@ -66,7 +66,7 @@ class UsersController < ApplicationController
       # :skill_tags_3,
       # :skill_tags_4,
       :skill_tags_else,
-      :achivement,
+      :achievement,
       :income,
       :preparation,
       :travel_date,

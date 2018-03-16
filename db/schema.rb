@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20180313075415) do
     t.integer  "skill_tags_3"
     t.integer  "skill_tags_4"
     t.text     "skill_tags_else",   limit: 65535
-    t.text     "achivement",        limit: 65535
+    t.text     "achievement",       limit: 65535
     t.string   "income"
     t.text     "preparation",       limit: 65535
     t.string   "travel_date"

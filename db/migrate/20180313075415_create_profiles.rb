@@ -33,7 +33,7 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
       t.integer       :skill_tags_3
       t.integer       :skill_tags_4
       t.text          :skill_tags_else
-      t.text          :achivement
+      t.text          :achievement
       t.string        :income
       t.text          :preparation
       t.string        :travel_date
