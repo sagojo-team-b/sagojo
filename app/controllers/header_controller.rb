@@ -4,11 +4,10 @@ class HeaderController < ApplicationController
   end
 
   def job
+    @job_num = Article.all
     if params[:keyword] == "latest"
-      @job_num = Article.all
       @articles = Article.order("created_at DESC").page(params[:page]).per(10)
     else
-      @job_num = Article.all
       @articles = Article.page(params[:page]).per(10)
     end
     respond_to do |format|
