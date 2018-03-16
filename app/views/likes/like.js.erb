@@ -1,0 +1,3 @@
+$("#like-link-<%= @article.id %>").html('<%= escape_javascript(render("likes/like_links", article: @article  )) %>');
+$("#like-link-<%= @article.id %>").removeClass();
+$("#star-<%= @article.id %>").addClass('.like-btn');
