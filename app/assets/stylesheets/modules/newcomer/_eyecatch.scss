@@ -1,0 +1,29 @@
+.eyecatch-wrapper {
+  padding-top: 71px;
+}
+
+.eyecatch-newcomer {
+  background-image: url(https://d1te0bovbq6epg.cloudfront.net/common/img/beginner/img-bg-eyecatch-01.jpg);
+  width: 100%;
+  min-width: $base-width;
+  min-height: 100%;
+  text-align: center;
+  line-height: 1.5;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.eyecatch-newcomer-inner {
+  min-height: 35px;
+  padding: 60px 0;
+  color: $black;
+  &__header {
+    font-size: 1.8rem;
+    font-weight: normal;
+    line-height: 1;
+    margin: 17px 0;
+    padding-left: 3px;
+    letter-spacing: 3px;
+  }
+}
