@@ -1,86 +1,86 @@
-%ul.job
-  %li.job__list.job__list--current
-    = link_to "", class: "job-btn job-btn--current" do
-      すべて
-      %span.job-btn__num
-        (85)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      記事執筆
-      %span.job-btn__num
-        (55)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      写真撮影
-      %span.job-btn__num
-        (4)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      動画撮影
-      %span.job-btn__num
-        (1)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      コンシェルジュ
-      %span.job-btn__num
-        (0)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      情報提供
-      %span.job-btn__num
-        (8)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      調査
-      %span.job-btn__num
-        (2)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      アンバサダー
-      %span.job-btn__num
-        (3)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      モデル
-      %span.job-btn__num
-        (1)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      体験モニター
-      %span.job-btn__num
-        (3)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      その他
-      %span.job-btn__num
-        (4)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      営業代行
-      %span.job-btn__num
-        (3)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      正社員
-      %span.job-btn__num
-        (1)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      編集者
-      %span.job-btn__num
-        (0)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      ディレクター
-      %span.job-btn__num
-        (1)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      モニターツアー
-      %span.job-btn__num
-        (1)
-  %li.job__list
-    = link_to "", class: "job-btn job-btn__hover-type" do
-      バイヤー
-      %span.job-btn__num
-        (1)
+/ %ul.job
+/ %li.job__list.job__list--current{ "data-id": all_tags[0].id }
+/   = link_to "", class: "job-btn job-btn--current" do
+/     =all_tags[0].job_tag_type
+/     %span.job-btn__num
+/       = "(#{@all_articles.count})"
+%li.job__list{ "data-id": tag.id }
+  = link_to home_job_category_path(tag.id), class: "job-btn job-btn__hover-type" do
+    =tag.job_tag_type
+    %span.job-btn__num
+      = "(#{tag.articles.count})"
+  / %li.job__list{ "data-id": all_tags[2].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[2].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[2].articles.count})"
+  / %li.job__list{ "data-id": all_tags[3].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[3].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[3].articles.count})"
+  / %li.job__list{ "data-id": all_tags[4].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[4].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[4].articles.count})"
+  / %li.job__list{ "data-id": all_tags[5].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[5].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[5].articles.count})"
+  / %li.job__list{ "data-id": all_tags[6].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[6].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[6].articles.count})"
+  / %li.job__list{ "data-id": all_tags[7].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[7].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[7].articles.count})"
+  / %li.job__list{ "data-id": all_tags[8].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[8].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[8].articles.count})"
+  / %li.job__list{ "data-id": all_tags[9].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[9].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[9].articles.count})"
+  / %li.job__list{ "data-id": all_tags[10].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[10].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[10].articles.count})"
+  / %li.job__list{ "data-id": all_tags[11].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[11].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[11].articles.count})"
+  / %li.job__list{ "data-id": all_tags[12].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[12].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[12].articles.count})"
+  / %li.job__list{ "data-id": all_tags[13].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[13].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[13].articles.count})"
+  / %li.job__list{ "data-id": all_tags[14].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[14].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[14].articles.count})"
+  / %li.job__list{ "data-id": all_tags[15].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[15].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[15].articles.count})"
+  / %li.job__list{ "data-id": all_tags[16].id }
+  /   = link_to "", class: "job-btn job-btn__hover-type" do
+  /     =all_tags[16].job_tag_type
+  /     %span.job-btn__num
+  /       = "(#{@all_tags[16].articles.count})"

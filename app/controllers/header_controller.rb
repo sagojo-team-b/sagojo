@@ -5,6 +5,8 @@ class HeaderController < ApplicationController
 
   def job
     @articles = Article.page(params[:page]).per(10)
+    @all_articles = Article.all
+    @all_tags = JobTag.all
   end
 
   def show
@@ -23,6 +25,13 @@ class HeaderController < ApplicationController
   end
 
   def faq
+  end
+
+  def category
+    @all_articles = Article.all
+    @selected_articles_number = JobTag.find(params[:id]).articles
+    @selected_articles = JobTag.find(params[:id]).articles.order('created_at DESC').page(params[:page]).per(10)
+    @all_tags = JobTag.all
   end
 
 end
