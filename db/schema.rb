@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313091619) do
 ActiveRecord::Schema.define(version: 20180314040834) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -32,11 +31,11 @@ ActiveRecord::Schema.define(version: 20180314040834) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.integer  "job_tag_id"
+    t.text     "thumbnail",              limit: 65535
   end
 
   create_table "job_tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "job_tag_type
-    t.text     "thumbnail",              limit: 65535
+    t.string "job_tag_type"
   end
 
   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
