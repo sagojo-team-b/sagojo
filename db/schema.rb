@@ -47,6 +47,50 @@ ActiveRecord::Schema.define(version: 20180314040834) do
     t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
+  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",                         null: false
+    t.string   "avatar"
+    t.string   "background_image"
+    t.string   "catch_phrase"
+    t.integer  "birth_date_y"
+    t.integer  "birth_date_m"
+    t.integer  "birth_date_d"
+    t.integer  "sex"
+    t.integer  "tel"
+    t.integer  "post_number"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address3"
+    t.string   "address4"
+    t.string   "present_place"
+    t.string   "private_link"
+    t.integer  "pv"
+    t.string   "sns"
+    t.integer  "follower"
+    t.integer  "job_type_tags_1"
+    t.integer  "job_type_tags_2"
+    t.integer  "job_type_tags_3"
+    t.integer  "job_type_tags_4"
+    t.text     "job_type_else",     limit: 65535
+    t.text     "language",          limit: 65535
+    t.text     "job_history",       limit: 65535
+    t.text     "travel_history",    limit: 65535
+    t.integer  "skill_tags_1"
+    t.integer  "skill_tags_2"
+    t.integer  "skill_tags_3"
+    t.integer  "skill_tags_4"
+    t.text     "skill_tags_else",   limit: 65535
+    t.text     "achievement",       limit: 65535
+    t.string   "income"
+    t.text     "preparation",       limit: 65535
+    t.string   "travel_date"
+    t.text     "travel_content",    limit: 65535
+    t.text     "self_introduction", limit: 65535
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
+  end
+
   create_table "triplab_articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "image_url",        limit: 65535
     t.string   "job_type_tag"
