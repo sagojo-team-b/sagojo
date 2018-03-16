@@ -27,7 +27,7 @@
             - if @profile.avatar.blank?
               = image_tag 'icon-tabibito-01.svg'
             - else
-              = @profile.avatar
+              = image_tag @profile.avatar, class: 'profile-image_cover'
           .header-utility-02__string.profile-name
             = current_user.name
           .header-utility-02.fa.fa-caret-down
