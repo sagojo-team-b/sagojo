@@ -52,7 +52,7 @@
     display: inline-block;
     a {
       text-decoration: none;
-      color: #808080;
+      color: $light_black;
       &:hover {
         opacity: 0.8;
       }
@@ -80,6 +80,9 @@
     font-size: 13px;
     float: left;
     margin-right: 8px;
+  }
+  .user_menu_btn {
+    cursor: pointer;
   }
 }
 

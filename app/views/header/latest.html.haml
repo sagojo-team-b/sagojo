@@ -1,0 +1,16 @@
+= render 'layouts/header'
+= render 'job/eyecatch'
+= render 'job/sub-content-select'
+.work-main-content
+  .main-left-content
+    = render partial: 'layouts/main-left-content', collection: @articles, as: :article
+    = paginate(@articles)
+  .right
+    = render 'job/right-job'
+    = render 'job/right-tag'
+= render 'layouts/sub-nav-4lists'
+= render 'layouts/sub-nav-2lists'
+.footer
+  .footer-inner
+    = render 'layouts/footer'
+    = render 'layouts/footer-copyright'

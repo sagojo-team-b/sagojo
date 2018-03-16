@@ -1,6 +1,6 @@
 .job-thumnail
-  = link_to '#', class: "job-thumnail-btn" do
-    = image_tag (article.image_url), class: "job-thumnail__image"
+  = link_to home_job_detail_path(article), class: "job-thumnail-btn" do
+    = image_tag (article.thumbnail), class: "job-thumnail__image"
     %span.job-thumnail__content
       .job-thumnail__content--company
         %img.job-thumnail__content--company-image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-company.svg" }
@@ -10,7 +10,12 @@
         = article.title
       %p.job-thumnail__content--thum-job-desc
         = article.introduction
-      %p.job-thumnail__content--thum-job-utility 募集終了まで 7 日 | 335 view
+      %p.job-thumnail__content--thum-job-utility
+        募集終了まで
+        %span.job-thumnail__content--thum-job-utility.remaining-days
+          = create_time(article.application_deadline)
+        %span.job-thumnail__content--thum-job-utility
+          日 | 335 view
       .thum-job-taglist
         %img.thum-job-taglist__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-tag-01.svg" }
         %ul.thum-job-taglist__ul
@@ -26,3 +31,8 @@
           - if article.other_reward?
             %img.inner-02__image{ src: "https://d1te0bovbq6epg.cloudfront.net/common/img/icon-object.svg" }
             %p.inner-02__p 他リターンあり
+  - if user_signed_in?
+    =render 'likes/like_links', article: article
+  - else
+    = link_to new_user_session_path do
+      = image_tag 'img_star_off', class: 'btn unlike-btn', id: "star-#{article.id}"

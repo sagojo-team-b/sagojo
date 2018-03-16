@@ -4,13 +4,13 @@
       %form.sub-content-form
         %label.sub-content-select
           %select.sub-content-select-box{ onChange: "location.href = value" }
-            %option{ value: "/work/recommend", selected: "selected" }おすすめ順
-            %option{ value: "/work/latest" }新着順
-            %option{ value: "/work/popular" }人気順
-            %option{ value: "/work/wanted" }募集中
-            %option{ value: "/work/finished" }募集終了
+            %option{ value: "/home/job" }おすすめ順
+            %option{ value: "/home/latest" }新着順
+            %option{ value: "/home/popular" }人気順
+            %option{ value: "/home/wanted" }募集中
+            %option{ value: "/home/finished" }募集終了
       %p.sub-content-text
         シゴト数
         %span.sub-content-num
-          85
+          = all_articles.count
         件
