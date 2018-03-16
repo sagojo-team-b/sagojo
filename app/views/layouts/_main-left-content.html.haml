@@ -34,5 +34,6 @@
   - if user_signed_in?
     =render 'likes/like_links', article: article
   - else
-    = link_to new_user_session_path do
-      = image_tag 'img_star_off', class: 'btn unlike-btn', id: "star-#{article.id}"
+    .like-link
+      = link_to new_user_session_path do
+        = image_tag 'img_star_off', class: 'unlike-btn', id: "star-#{article.id}"
