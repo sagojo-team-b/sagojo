@@ -1,13 +1,14 @@
 = render 'layouts/header'
 = render 'job/eyecatch'
-= render 'job/sub-content-select'
+= render partial: 'job/sub-content-select', locals: { all_articles: @all_articles }
 .work-main-content
   .main-left-content
     = render partial: 'layouts/finished-main-left-content', collection: @articles, as: :article
     = paginate(@articles)
   .right
-    = render 'job/right-job'
-    = render 'job/right-tag'
+    %ul.job
+      = render partial: 'job/right-job', locals: { all_tags: @all_tags }, collection: @all_tags, as: :tag
+      = render 'job/right-tag'
 = render 'layouts/sub-nav-4lists'
 = render 'layouts/sub-nav-2lists'
 .footer
