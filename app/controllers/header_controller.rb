@@ -27,4 +27,11 @@ class HeaderController < ApplicationController
   def faq
   end
 
+  def category
+    @all_articles = Article.all
+    @selected_articles_number = JobTag.find(params[:id]).articles
+    @selected_articles = JobTag.find(params[:id]).articles.order('created_at DESC').page(params[:page]).per(10)
+    @all_tags = JobTag.all
+  end
+
 end
