@@ -9,6 +9,24 @@ class HeaderController < ApplicationController
     @all_tags = JobTag.all
   end
 
+  def latest
+    @articles = Article.order("created_at DESC").page(params[:page]).per(10)
+  end
+
+  def popular
+    article_ids = Like.group(:article_id).order("count_article_id DESC").count(:article_id).keys
+    @liked_articles = article_ids.map{ |id| Article.find(id) }
+    @articles = Kaminari.paginate_array(@liked_articles).page(params[:page]).per(10)
+  end
+
+  def wanted
+    @articles = Article.page(params[:page]).per(10)
+  end
+
+  def finished
+    @articles = Article.order("created_at DESC").page(params[:page]).per(10)
+  end
+
   def show
     @articles = Article.limit(3)
     @article = Article.find(params[:id])
