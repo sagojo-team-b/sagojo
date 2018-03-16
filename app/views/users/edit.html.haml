@@ -1,11 +1,9 @@
 = render 'layouts/header'
 = form_for @profile, url: {action: 'update'} do |f|
   .background
-    - if @profile.background_image.blank?
-      %i.fa.fa-image
-    - else
-      = image_tag @profile.background_image.url
-    = f.file_field :background_image, class: 'background__image'
+    .background__cover
+      = image_tag @profile.background_image.url, class: 'background-image-size' if @profile.background_image.present?
+    = f.file_field :background_image, class: 'background-image-input js-input'
     =f.label :background_image do
       %i.fa.fa-image
     %p.background-image-label
@@ -13,11 +11,12 @@
   .profile-wrapper
     .profile-contents
       .profile-contents__left
-        - if @profile.avatar.blank?
-          = image_tag 'icon-tabibito-01.svg', class: "avatar-image"
-        - else
-          = image_tag @profile.avatar.url, class: "avatar-image"
-        = f.file_field :avatar, class: 'avatar'
+        .avatar-cover
+          - if @profile.avatar.blank?
+            = image_tag 'icon-tabibito-01.svg', class: "avatar-image"
+          - else
+            = image_tag @profile.avatar.url, class: "avatar-image"
+        = f.file_field :avatar, class: 'avatar js-avatar'
         = f.label :avatar do
           = image_tag 'icon-prof-camera.svg', class: 'avatar-icon'
         .prrofile-contents__left__inner
