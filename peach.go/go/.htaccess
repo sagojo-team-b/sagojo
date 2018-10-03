@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://go.extrapeach.jp/$1 [R=301,L]
+
+RewriteRule ^kochi/$ /システムエンジニア結婚相談所$1 [R=301,L]

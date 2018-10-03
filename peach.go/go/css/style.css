@@ -1,0 +1,684 @@
+@charset "utf-8";
+/*---------- CSS Document ----------*/
+
+
+/*---------- base ----------*/
+html{
+  -webkit-text-size-adjust: 100%;}
+
+body{
+  margin:0px;
+  padding:0px;
+  text-align:center;
+  color:#2d2d2d;
+  font-size: 1.0rem;
+  font-family: "メイリオ", " YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",  sans-serif;}
+
+ul,li{
+  list-style:none;
+  margin:0px;
+  padding:0px;}
+
+p,h1,h2,h3,h4{
+  margin:0px;
+  padding:0px;
+  text-align:center;}
+
+.t_14{
+  font-size:14px;
+  font-weight:normal;
+}
+
+.t_18{
+  font-size:18px;
+  font-weight:bold;
+  margin:0 0 10px 0;
+}
+
+.t_24{
+  font-size:24px;
+  font-weight:bold;
+  margin:0 0 10px 0;
+}
+.t_bold{
+  font-weight:bold;
+}
+
+.t_line{
+  text-decoration: underline;
+}
+
+.t_red{
+  color:#d90000;
+}
+
+.t_white{
+  color:white;
+}
+
+.t_cross{
+  font-size:30px;
+  color:#ccc;
+  font-weight:bold;
+  line-height:20px;
+}
+
+.mb_20{
+  margin:0 0 20px 0;
+}
+
+.mr_15{
+  margin:0 15px 0 0;
+}
+
+.marker_yellow {
+  background: linear-gradient(rgba(255, 255, 255, 0) 40%, #ffff00 70%);
+}
+
+.gray_line{
+  border-right:#eee 1px solid;
+}
+
+.comments{
+  font-size:12px;
+  color:#808080;
+  font-weight: normal;
+}
+
+
+
+/*---------- header ----------*/
+.h_copy{
+  width:960px;
+  height:100px;
+  margin:30px auto;
+}
+
+header h1{
+  height:26px;
+  width:100%;
+  font-size:14px;
+  font-weight: normal;
+  color:#fff;
+  background-color: #ee7b33;
+  padding:7px 0 0 0;
+}
+
+header h2{
+  font-size:28px;
+  color:#2d2d2d;
+  margin:0 0 0 200px;
+  float:left;
+}
+
+.h_copy img{
+  float:left;
+}
+
+
+/*---------- KV ----------*/
+.kv{
+  width:100%;
+  height:900px;
+  background:url(../images/kv_photo.png) no-repeat;
+  background-position:top;
+  overflow: hidden;
+}
+
+.kv_img{
+  margin:380px 0 30px 0;
+  text-align: center;
+}
+
+.attention{
+  width:970px;
+  height:200px;
+  margin:30px auto 0;
+  padding:0px;
+  background:url(../images/atention_bg.png) top center no-repeat;
+}
+
+.attention p{
+  padding:20px 0 0 0;
+}
+
+
+/*---------- section_01 ----------*/
+.section_01{
+  background-color: #ffeee3;
+  padding:30px 0 60px 0;
+}
+
+.section_01 .moyamoya{
+  margin:0 auto;
+  width:960px;
+  height:515px;
+  background:url(../images/bg_moyamoya.png) top center no-repeat;
+}
+
+.section_01 h2{
+  font-size:30px;
+  padding:80px 0 20px 0;
+}
+
+.section_01 h3{
+  font-size:50px;
+  padding:0 0 0 0;
+  margin:50px 0 20px 0;
+}
+
+.section_01 ul li{
+  text-align:left;
+  margin:0 0 8px 180px;
+}
+
+.section_01 .red{
+  color:#d90000;
+  font-size:18px;
+  font-weight:bold;
+  margin:0 0 30px;
+}
+
+.section_01 .red{
+  color:#d90000;
+  font-size:18px;
+  font-weight:bold;
+  margin:0 0 30px;
+}
+
+
+/*---------- section_02 ----------*/
+.section_02{
+  margin:0 auto;
+  background:url(../images/cection_02_bg.png) top center no-repeat;
+  -moz-background-size:cover;
+background-size:cover;
+}
+
+.section_02 h2{
+  font-size:30px;
+  padding:80px 0 0 0;
+}
+
+.section_02 ul{
+  padding:30px 0 0 70px;
+  width:960px;
+  margin:0 auto;
+}
+
+.section_02 ul li{
+  font-size:16px;
+  list-style-image:url(../images/icon_check.png);
+  list-style-position: ;
+  text-align:left;
+  margin:0 0 15px 0;
+}
+
+
+/*---------- section_03 ----------*/
+.section_03{
+  margin:60px auto;
+  width:100%;
+  overflow:auto;
+  background:url(../images/letter_bg.png) top center repeat-y;
+  -moz-background-size:cover;
+background-size:cover;
+}
+
+.section_03 .letter{
+  margin:30px auto;
+  padding:30px 0;
+  width:960px;
+  height:2015px;
+  background:url(../images/letter_bg_02.png) center center no-repeat;
+}
+
+.section_03 h2{
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  text-align:left;
+  padding:50px 0 0 40px;
+  margin:0 auto;
+  }
+
+.section_03 p{
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size:15px;
+  text-align:left;
+  padding:20px 40px 0 40px;
+  }
+
+.section_03 img{
+  float:right;
+  padding:0 60px 0 0;
+}
+
+
+/*---------- section_04 ----------*/
+.section_04{
+  overflow:auto;
+  margin:0 auto;
+  background:url(../images/section_04_bg.png) bottom center no-repeat;
+  -moz-background-size:cover;
+background-size:cover;
+}
+
+.section_04 h2{
+  font-size:34px;
+  margin:0 0 30px 0;
+}
+
+.section_04 p{
+  margin:0 0 30px 0;
+}
+
+.section_04 h3{
+  font-size:20px;
+  margin:60px 0 15px 0;
+}
+
+.section_04 ul{
+  display:table;
+  width:960px;
+  margin:0 auto;
+  padding:0 0 80px 0;
+}
+
+.section_04 li{
+  display:table-cell;
+  width:320px;
+  margin:0 0 60px 0;
+  padding:0 0 20px 0;
+  background:white;
+}
+
+.section_04 li p{
+  padding:20px 20px 0 20px;
+  background:white;
+  border:none;
+  margin:0 0 0 0;
+  text-align:left;
+}
+
+.section_04 ul li img{
+  padding:0 0 0 0;
+}
+
+/*---------- section_05 ----------*/
+.section_05{
+  background-color: #f58138;
+  padding:80px 0 60px 0;
+}
+
+.section_05 h2{
+  font-size:30px;
+  color:white;
+  padding:0 0 20px 0;
+}
+
+.section_05 h3{
+  font-size:30px;
+  color:white;
+  padding:50px 0 20px 0;
+}
+
+.section_05 h4{
+  font-size:20px;
+  color:#eb640f;
+  padding:20px 0 10px 0;
+}
+
+.step_bg{
+  width:960px;
+  margin:20px auto 0;
+  position:static;
+}
+
+.step_content{
+  width:960px;
+  height:250px;
+  margin:0 0 25px 4px;
+  background:white;
+  border-radius: 6px;
+}
+
+.step_content img{
+  float:left;
+  margin:0 50px 0 0;
+  position:relative;
+  top:-20px;
+  left:20px;
+}
+
+.step_content p{
+  text-align:left;
+  padding:90px 30px 0 100px;
+}
+
+.section_05 ul{
+  width:960px;
+  margin:0 auto 30px;
+  overflow:auto;
+}
+
+.section_05 li{
+  float:left;
+  width:310px;
+  height:200px;
+  background:white;
+  border-radius: 6px;
+}
+
+.section_05 li p{
+  font-size:14px;
+  text-align:left;
+  padding:0 20px 0 20px;
+}
+
+
+/*---------- section_06 ----------*/
+.section_06{
+  margin:60px auto 60px;
+  height:auto;
+}
+
+.section_06 h2{
+  font-size:34px;
+  margin:60 0 30px 0;
+}
+
+.section_06 p{
+  margin:0 0 30px 0;
+}
+
+.s_photo{
+  width: 960px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.s_photo li{
+  float:left;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
+/*---------- section_07 ----------*/
+.section_07{
+  background-color: #ffeee3;
+  padding:60px 0 60px 0;
+}
+
+.section_07 h2{
+  font-size:34px;
+  margin:0 0 30px 0;
+}
+
+.section_07 ul{
+  padding:0 0 0 100px;
+  width:960px;
+  margin:0 auto;
+}
+
+.section_07 .merit_01{
+  width:960px;
+  height:100px;
+  background:url(../images/merit_icon_01.png) no-repeat;
+}
+
+.section_07 .merit_01 p{
+  margin:0 auto;
+  padding:10px 0 0 90px;
+  text-align:left;
+}
+
+.section_07 .merit_02{
+  width:960px;
+  height:100px;
+  background:url(../images/merit_icon_02.png) no-repeat;
+}
+
+.section_07 .merit_02 p{
+  margin:0 auto;
+  padding:10px 0 0 90px;
+  text-align:left;
+}
+
+.section_07 .merit_03{
+  width:960px;
+  height:100px;
+  background:url(../images/merit_icon_03.png) no-repeat;
+}
+
+.section_07 .merit_03 p{
+  margin:0 auto;
+  padding:10px 0 0 90px;
+  text-align:left;
+}
+
+.section_07 .merit_04{
+  width:960px;
+  height:100px;
+  background:url(../images/merit_icon_04.png) no-repeat;
+}
+
+.section_07 .merit_04 p{
+  margin:0 auto;
+  padding:10px 0 0 90px;
+  text-align:left;
+}
+
+.section_07 .merit_05{
+  width:960px;
+  height:100px;
+  background:url(../images/merit_icon_05.png) no-repeat;
+}
+
+.section_07 .merit_05 p{
+  margin:0 auto;
+  padding:10px 0 0 90px;
+  text-align:left;
+}
+
+.section_07 .merit_06{
+  width:960px;
+  height:100px;
+  background:url(../images/merit_icon_06.png) no-repeat;
+}
+
+.section_07 .merit_06 p{
+  margin:0 auto;
+  padding:10px 0 0 90px;
+  text-align:left;
+}
+
+.section_07 .merit_07{
+  width:960px;
+  height:100px;
+  background:url(../images/merit_icon_07.png) no-repeat;
+}
+
+.section_07 .merit_07 p{
+  margin:0 auto;
+  padding:10px 0 0 90px;
+  text-align:left;
+}
+
+
+
+
+
+/*---------- section_08 ----------*/
+
+.section_08{
+  background:url(../images/voice_bg.png) ;
+  padding:60px 0 60px 0;
+}
+
+.section_08 h2{
+  font-size:34px;
+  margin:0 0 30px 0;
+}
+
+.voice_bg{
+  width:960px;
+  margin:0 auto;
+  position:static;
+}
+
+.voice_content{
+  width:950px;
+  margin:0 0 40px 4px;
+  background:white;
+  border: solid 3px #f58138;
+  border-radius: 6px;
+}
+
+.voice_content h3{
+  float:left;
+  color:white;
+  height:54px;
+  width:613px;
+  font-size:18px;
+  font-weight:normal;
+  background:url(../images/voice_title_bg.png) no-repeat;
+  position:relative;
+  top:15px;
+  left:-12px;
+  text-indent:30px;
+}
+
+.voice_content h3 p{
+  padding:10px 0 0 0;
+}
+
+.voice_content p{
+  padding:80px 30px 30px 30px;
+  text-align:left;
+}
+.voice_content img{
+  padding:20px 20px 20px 0;
+  float:right;
+}
+
+
+
+
+/*---------- section_09 ----------*/
+.section_09{
+  background-color: #ffeee3;
+  padding:60px 0 60px 0;
+}
+
+.section_09 h2{
+  font-size:34px;
+  margin:0 0 30px 0;
+}
+
+.section_09 ul{
+  width:960px;
+  margin:0 auto 40px;
+  text-align:left;
+}
+
+.section_09 ul li{
+  padding:20px 0 20px 0;
+  background:url(../images/qa_line_bg.png) repeat-x bottom;
+}
+
+.section_09 ul p{
+  font-size:18px;
+  font-weight:bold;
+  text-align:left;
+  color:#d90000;
+  }
+
+
+
+
+/*---------- section_10----------*/
+.section_10{
+  padding:60px 0 60px 0;
+  width:960px;
+  margin:0 auto;
+}
+
+.section_10 h2{
+  font-size:34px;
+  margin:0 0 30px 0;
+}
+
+.section_10 p{
+  padding:0px 0 30px 0;
+  margin:0 auto;
+  text-align:left;
+}
+
+.section_10 ul{
+  padding:0px 0 30px 0;
+  margin:0 auto;
+  text-align:left;
+}
+
+
+
+/*---------- section_11----------*/
+.section_11{
+  background-color: #ffeee3;
+  padding:60px 0 60px 0;
+}
+
+.section_11 h2{
+  font-size:34px;
+  margin:0 0 30px 0;
+}
+
+.section_11_content{
+  width:960px;
+  margin:0 auto;
+  overflow:auto;
+}
+
+.section_11 p{
+  width:550px;
+  padding:0px 0 30px 0;
+  margin:0 auto;
+  text-align:left;
+  float:left;
+}
+
+.section_11 img{
+  margin:auto 0px;
+
+}
+
+
+
+/*---------- section_12----------*/
+.section_12{
+  padding:60px 0 60px 0;
+  width:960px;
+  margin:0 auto;
+}
+
+.section_12 h2{
+  font-size:34px;
+  margin:0 0 30px 0;
+}
+
+.section_12 form{
+  margin:20px auto 0;
+}
+
+
+/*---------- footer----------*/
+footer{
+  height:30px;
+  font-size:12px;
+  color:#aaa;
+  border-top:solid 1px #ddd;
+  padding:8px 0 0 0;
+}
